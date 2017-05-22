@@ -243,12 +243,12 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `daju_2004`.`materiales_bobinas`
+-- Table `daju_2004`.`bobinas`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `daju_2004`.`materiales_bobinas` ;
+DROP TABLE IF EXISTS `daju_2004`.`bobinas` ;
 
-CREATE TABLE IF NOT EXISTS `daju_2004`.`materiales_bobinas` (
-  `materiale_id` INT UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `daju_2004`.`bobinas` (
+  `id` INT UNSIGNED NOT NULL,
   `lote` VARCHAR(255) NULL,
   `numero` INT NULL,
   `taras` INT NULL,
@@ -257,9 +257,9 @@ CREATE TABLE IF NOT EXISTS `daju_2004`.`materiales_bobinas` (
   `metros_actuales` FLOAT NULL,
   `en_uso` VARCHAR(255) NULL,
   `terminado` VARCHAR(255) NULL,
-  PRIMARY KEY (`materiale_id`),
+  PRIMARY KEY (`id`),
   CONSTRAINT `fk_materiales_bobinas_materiales1`
-    FOREIGN KEY (`materiale_id`)
+    FOREIGN KEY (`id`)
     REFERENCES `daju_2004`.`materiales` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -267,19 +267,19 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `daju_2004`.`materiales_lotes`
+-- Table `daju_2004`.`lotes`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `daju_2004`.`materiales_lotes` ;
+DROP TABLE IF EXISTS `daju_2004`.`lotes` ;
 
-CREATE TABLE IF NOT EXISTS `daju_2004`.`materiales_lotes` (
-  `materiale_id` INT UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `daju_2004`.`lotes` (
+  `id` INT UNSIGNED NOT NULL,
   `lote` VARCHAR(255) NULL,
   `peso` FLOAT NULL,
   `metros` FLOAT NULL,
   `unidades` INT NULL,
-  PRIMARY KEY (`materiale_id`),
+  PRIMARY KEY (`id`),
   CONSTRAINT `fk_materiales_lotes_materiales1`
-    FOREIGN KEY (`materiale_id`)
+    FOREIGN KEY (`id`)
     REFERENCES `daju_2004`.`materiales` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)

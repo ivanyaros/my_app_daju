@@ -43,6 +43,10 @@ class UsuariosControllerTest extends IntegrationTestCase
         'app.pedidos_empresas_producto',
         'app.salidas_productos_producto',
         'app.productos',
+        'app.ordens_estados_utensilios',
+        'app.utensilios',
+        'app.ordens_estados_maquinas',
+        'app.maquinas',
         'app.ordens_estados_usuarios'
     ];
 

@@ -32,14 +32,11 @@ class MaterialesBobinasTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('materiales_bobinas');
-        $this->setDisplayField('materiale_id');
-        $this->setPrimaryKey('materiale_id');
+       /* $this->setTable('materiales_bobinas');
+        /*$this->setDisplayField('materiale_id');
+        $this->setPrimaryKey('materiale_id');*/
 
-        $this->belongsTo('Materiales', [
-            'foreignKey' => 'materiale_id',
-            'joinType' => 'INNER'
-        ]);
+        $this->belongsTo('Materiales');
     }
 
     /**

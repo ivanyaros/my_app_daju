@@ -55,8 +55,8 @@ class OrdensFixture extends TestFixture
             'nombre' => 'Lorem ipsum dolor sit amet',
             'referencia' => 'Lorem ipsum dolor sit amet',
             'cantidad' => 1,
-            'fecha_creacion' => '2017-05-22 11:57:03',
-            'fecha_terminacion' => '2017-05-22 11:57:03',
+            'fecha_creacion' => '2017-05-22 13:42:29',
+            'fecha_terminacion' => '2017-05-22 13:42:29',
             'estado_id' => 1,
             'centro_id' => 1,
             'proceso_id' => 1

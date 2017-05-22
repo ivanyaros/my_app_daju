@@ -4,21 +4,15 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * MaterialesBobina Entity
+ * Lote Entity
  *
- * @property int $materiale_id
+ * @property int $id
  * @property string $lote
- * @property int $numero
- * @property int $taras
- * @property float $metros_brutos
- * @property float $metros_netos
- * @property float $metros_actuales
- * @property string $en_uso
- * @property string $terminado
- *
- * @property \App\Model\Entity\Materiale $materiale
+ * @property float $peso
+ * @property float $metros
+ * @property int $unidades
  */
-class MaterialesBobina extends Entity
+class Lote extends Entity
 {
 
     /**
@@ -32,6 +26,6 @@ class MaterialesBobina extends Entity
      */
     protected $_accessible = [
         '*' => true,
-        'materiale_id' => true
+        'id' => false
     ];
 }
