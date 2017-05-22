@@ -15,7 +15,6 @@ use Cake\ORM\Entity;
  * @property string $direccion
  * @property string $tipo
  *
- * @property \App\Model\Entity\Usuario $usuario
  * @property \App\Model\Entity\OrdensEstado[] $ordens_estados
  */
 class Usuario extends Entity

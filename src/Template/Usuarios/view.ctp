@@ -10,8 +10,6 @@
         <li><?= $this->Form->postLink(__('Delete Usuario'), ['action' => 'delete', $usuario->usuario_id], ['confirm' => __('Are you sure you want to delete # {0}?', $usuario->usuario_id)]) ?> </li>
         <li><?= $this->Html->link(__('List Usuarios'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Usuario'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Usuarios'), ['controller' => 'Usuarios', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Usuario'), ['controller' => 'Usuarios', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Ordens Estados'), ['controller' => 'OrdensEstados', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Ordens Estado'), ['controller' => 'OrdensEstados', 'action' => 'add']) ?> </li>
     </ul>
