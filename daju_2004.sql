@@ -21,7 +21,7 @@ USE `daju_2004` ;
 DROP TABLE IF EXISTS `daju_2004`.`proveedores_clientes` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`proveedores_clientes` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(255) NULL,
   `direccion_fiscal` VARCHAR(255) NULL,
   `telefono` VARCHAR(255) NULL,
@@ -42,7 +42,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`direcciones` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`direcciones` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `proveedores_cliente_id` INT UNSIGNED NOT NULL,
   `direccion` VARCHAR(255) NULL,
   `telefono` VARCHAR(255) NULL,
@@ -66,7 +66,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`ivas` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`ivas` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(255) NULL,
   `valor` FLOAT NULL,
   `observaciones` VARCHAR(255) NULL,
@@ -80,7 +80,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`monedas` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`monedas` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(255) NULL,
   `valor` FLOAT NULL,
   `observaciones` VARCHAR(255) NULL,
@@ -94,7 +94,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`centros` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`centros` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(255) NULL,
   `referencia` VARCHAR(255) NULL,
   `direccion` VARCHAR(255) NULL,
@@ -109,7 +109,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`entradas_material` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`entradas_material` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `proveedores_cliente_id` INT UNSIGNED NULL,
   `observaciones` VARCHAR(255) NULL,
   `albaran` VARCHAR(255) NULL,
@@ -137,7 +137,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`familias` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`familias` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(255) NULL,
   `observaciones` VARCHAR(255) NULL,
   PRIMARY KEY (`id`))
@@ -150,7 +150,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`material` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`material` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` TINYBLOB NULL,
   `referencia` TINYBLOB NULL,
   `familia_id` INT UNSIGNED NULL,
@@ -194,7 +194,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`localizaciones` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`localizaciones` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `centro_id` INT UNSIGNED NULL,
   `nombre` VARCHAR(255) NULL,
   PRIMARY KEY (`id`),
@@ -213,7 +213,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`materiales` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`materiales` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `material_id` INT UNSIGNED NOT NULL,
   `nombre` VARCHAR(255) NULL,
   `referencia` VARCHAR(255) NULL,
@@ -316,7 +316,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`producto` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`producto` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(255) NULL,
   `referencia` VARCHAR(255) NULL,
   `familia_id` INT UNSIGNED NULL,
@@ -353,7 +353,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`proceso` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`proceso` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(255) NULL,
   `referencia` VARCHAR(255) NULL,
   `familia_id` INT UNSIGNED NULL,
@@ -488,7 +488,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`estados` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`estados` (
-  `id` MEDIUMINT UNSIGNED NOT NULL,
+  `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(255) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -500,7 +500,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`ordens` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`ordens` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(255) NULL,
   `referencia` VARCHAR(255) NULL,
   `cantidad` INT NULL,
@@ -537,7 +537,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`objetos` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`objetos` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `producto_id` INT UNSIGNED NULL,
   `referencia` VARCHAR(255) NULL,
   `productoscol` VARCHAR(45) NULL,
@@ -564,7 +564,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`maquinas` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`maquinas` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(255) NULL,
   `referencia` VARCHAR(255) NULL,
   `maquinacol` VARCHAR(45) NULL,
@@ -578,7 +578,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`utensilios` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`utensilios` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(255) NULL,
   `referencia` VARCHAR(255) NULL,
   `utilcol` VARCHAR(45) NULL,
@@ -592,7 +592,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`pedidos_empresas` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`pedidos_empresas` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(255) NULL,
   `referencia` VARCHAR(255) NULL,
   `proveedores_cliente_id` INT UNSIGNED NULL,
@@ -614,7 +614,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`salidas_productos` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`salidas_productos` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `proveedores_cliente_id` INT UNSIGNED NULL,
   `fecha_pedido` DATETIME NULL,
   `fecha_entrega` DATETIME NULL,
@@ -716,7 +716,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`usuarios` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`usuarios` (
-  `id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(255) NULL,
   `apellidos` VARCHAR(255) NULL,
   `login` VARCHAR(45) NULL,
