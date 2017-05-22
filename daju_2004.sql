@@ -716,7 +716,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `daju_2004`.`usuarios` ;
 
 CREATE TABLE IF NOT EXISTS `daju_2004`.`usuarios` (
-  `usuario_id` INT UNSIGNED NOT NULL,
+  `id` INT UNSIGNED NOT NULL,
   `nombre` VARCHAR(255) NULL,
   `apellidos` VARCHAR(255) NULL,
   `login` VARCHAR(45) NULL,
@@ -724,7 +724,7 @@ CREATE TABLE IF NOT EXISTS `daju_2004`.`usuarios` (
   `email` VARCHAR(45) NULL,
   `direccion` VARCHAR(45) NULL,
   `tipo` VARCHAR(45) NULL,
-  PRIMARY KEY (`usuario_id`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
@@ -748,7 +748,7 @@ CREATE TABLE IF NOT EXISTS `daju_2004`.`ordens_estados_usuarios` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_ordens_estados_has_usuarios_usuarios1`
     FOREIGN KEY (`usuario_id`)
-    REFERENCES `daju_2004`.`usuarios` (`usuario_id`)
+    REFERENCES `daju_2004`.`usuarios` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

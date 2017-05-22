@@ -48,7 +48,8 @@ class SalidasProductosTableTest extends TestCase
         'app.materiales',
         'app.proceso_material',
         'app.proveedores_clientes_material',
-        'app.salidas_productos_producto'
+        'app.salidas_productos_producto',
+        'app.productos'
     ];
 
     /**

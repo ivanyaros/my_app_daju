@@ -16,7 +16,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('usuario_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('nombre') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('apellidos') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('login') ?></th>
@@ -30,7 +30,7 @@
         <tbody>
             <?php foreach ($usuarios as $usuario): ?>
             <tr>
-                <td><?= $usuario->has('usuario') ? $this->Html->link($usuario->usuario->usuario_id, ['controller' => 'Usuarios', 'action' => 'view', $usuario->usuario->usuario_id]) : '' ?></td>
+                <td><?= $this->Number->format($usuario->id) ?></td>
                 <td><?= h($usuario->nombre) ?></td>
                 <td><?= h($usuario->apellidos) ?></td>
                 <td><?= h($usuario->login) ?></td>

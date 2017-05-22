@@ -20,10 +20,6 @@
     <h3><?= h($usuario->usuario_id) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Usuario') ?></th>
-            <td><?= $usuario->has('usuario') ? $this->Html->link($usuario->usuario->usuario_id, ['controller' => 'Usuarios', 'action' => 'view', $usuario->usuario->usuario_id]) : '' ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Nombre') ?></th>
             <td><?= h($usuario->nombre) ?></td>
         </tr>
@@ -50,6 +46,10 @@
         <tr>
             <th scope="row"><?= __('Tipo') ?></th>
             <td><?= h($usuario->tipo) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($usuario->id) ?></td>
         </tr>
     </table>
     <div class="related">

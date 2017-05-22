@@ -9,7 +9,6 @@ use Cake\Validation\Validator;
 /**
  * Usuarios Model
  *
- * @property \Cake\ORM\Association\BelongsTo $Usuarios
  * @property \Cake\ORM\Association\BelongsToMany $OrdensEstados
  *
  * @method \App\Model\Entity\Usuario get($primaryKey, $options = [])
@@ -37,10 +36,6 @@ class UsuariosTable extends Table
         $this->setDisplayField('usuario_id');
         $this->setPrimaryKey('usuario_id');
 
-        $this->belongsTo('Usuarios', [
-            'foreignKey' => 'usuario_id',
-            'joinType' => 'INNER'
-        ]);
         $this->belongsToMany('OrdensEstados', [
             'foreignKey' => 'usuario_id',
             'targetForeignKey' => 'ordens_estado_id',
@@ -56,6 +51,10 @@ class UsuariosTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
         $validator
             ->allowEmpty('nombre');
 
@@ -92,7 +91,6 @@ class UsuariosTable extends Table
     {
         $rules->add($rules->isUnique(['login']));
         $rules->add($rules->isUnique(['email']));
-        $rules->add($rules->existsIn(['usuario_id'], 'Usuarios'));
 
         return $rules;
     }

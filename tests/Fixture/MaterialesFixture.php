@@ -53,7 +53,7 @@ class MaterialesFixture extends TestFixture
             'material_id' => 1,
             'nombre' => 'Lorem ipsum dolor sit amet',
             'referencia' => 'Lorem ipsum dolor sit amet',
-            'fecha_entega' => '2017-05-22 11:33:26',
+            'fecha_entega' => '2017-05-22 11:57:02',
             'localizacion_id' => 1,
             'entradas_material_id' => 1
         ],

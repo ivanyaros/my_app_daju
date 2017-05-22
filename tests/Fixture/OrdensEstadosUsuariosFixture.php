@@ -28,7 +28,7 @@ class OrdensEstadosUsuariosFixture extends TestFixture
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['ordens_estados_orden_id', 'ordens_estados_estado_id', 'usuario_id'], 'length' => []],
             'fk_ordens_estados_has_usuarios_ordens_estados1' => ['type' => 'foreign', 'columns' => ['ordens_estados_orden_id', 'ordens_estados_estado_id'], 'references' => ['ordens_estados', '1' => ['orden_id', 'estado_id']], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
-            'fk_ordens_estados_has_usuarios_usuarios1' => ['type' => 'foreign', 'columns' => ['usuario_id'], 'references' => ['usuarios', 'usuario_id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
+            'fk_ordens_estados_has_usuarios_usuarios1' => ['type' => 'foreign', 'columns' => ['usuario_id'], 'references' => ['usuarios', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',

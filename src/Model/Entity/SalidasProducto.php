@@ -18,6 +18,7 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\PedidosEmpresa $pedidos_empresa
  * @property \App\Model\Entity\Centro $centro
  * @property \App\Model\Entity\Producto[] $producto
+ * @property \App\Model\Entity\SalidasProductosProducto[] $salidas_productos_producto
  */
 class SalidasProducto extends Entity
 {

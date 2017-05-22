@@ -97,7 +97,7 @@
         <?php if (!empty($ordensEstado->usuarios)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th scope="col"><?= __('Usuario Id') ?></th>
+                <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Nombre') ?></th>
                 <th scope="col"><?= __('Apellidos') ?></th>
                 <th scope="col"><?= __('Login') ?></th>
@@ -109,7 +109,7 @@
             </tr>
             <?php foreach ($ordensEstado->usuarios as $usuarios): ?>
             <tr>
-                <td><?= h($usuarios->usuario_id) ?></td>
+                <td><?= h($usuarios->id) ?></td>
                 <td><?= h($usuarios->nombre) ?></td>
                 <td><?= h($usuarios->apellidos) ?></td>
                 <td><?= h($usuarios->login) ?></td>

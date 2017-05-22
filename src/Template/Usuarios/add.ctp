@@ -18,6 +18,7 @@
     <fieldset>
         <legend><?= __('Add Usuario') ?></legend>
         <?php
+            echo $this->Form->control('id');
             echo $this->Form->control('nombre');
             echo $this->Form->control('apellidos');
             echo $this->Form->control('login');

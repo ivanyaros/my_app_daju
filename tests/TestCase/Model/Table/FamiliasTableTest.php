@@ -26,8 +26,30 @@ class FamiliasTableTest extends TestCase
     public $fixtures = [
         'app.familias',
         'app.material',
+        'app.monedas',
         'app.proceso',
-        'app.producto'
+        'app.ivas',
+        'app.producto',
+        'app.cajas',
+        'app.objetos',
+        'app.ordens',
+        'app.estados',
+        'app.ordens_estados',
+        'app.centros',
+        'app.entradas_material',
+        'app.proveedores_clientes',
+        'app.direcciones',
+        'app.pedidos_empresas',
+        'app.salidas_productos',
+        'app.salidas_productos_producto',
+        'app.productos',
+        'app.pedidos_empresas_producto',
+        'app.proveedores_clientes_material',
+        'app.materiales',
+        'app.localizaciones',
+        'app.palets',
+        'app.proceso_producto',
+        'app.proceso_material'
     ];
 
     /**

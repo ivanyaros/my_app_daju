@@ -25,7 +25,31 @@ class PaletsTableTest extends TestCase
      */
     public $fixtures = [
         'app.palets',
-        'app.producto'
+        'app.producto',
+        'app.familias',
+        'app.material',
+        'app.monedas',
+        'app.proceso',
+        'app.ivas',
+        'app.centros',
+        'app.entradas_material',
+        'app.proveedores_clientes',
+        'app.direcciones',
+        'app.pedidos_empresas',
+        'app.salidas_productos',
+        'app.salidas_productos_producto',
+        'app.productos',
+        'app.pedidos_empresas_producto',
+        'app.proveedores_clientes_material',
+        'app.materiales',
+        'app.localizaciones',
+        'app.ordens',
+        'app.estados',
+        'app.ordens_estados',
+        'app.objetos',
+        'app.proceso_material',
+        'app.proceso_producto',
+        'app.cajas'
     ];
 
     /**

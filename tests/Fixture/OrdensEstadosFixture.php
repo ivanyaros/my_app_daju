@@ -45,7 +45,7 @@ class OrdensEstadosFixture extends TestFixture
         [
             'orden_id' => 1,
             'estado_id' => 1,
-            'fecha' => '2017-05-22 11:33:27'
+            'fecha' => '2017-05-22 11:57:03'
         ],
     ];
 }

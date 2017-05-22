@@ -11,8 +11,8 @@ use Cake\ORM\Entity;
  * @property int $cantidad
  * @property string $observaciones
  *
- * @property \App\Model\Entity\Producto $producto
  * @property \App\Model\Entity\SalidasProducto $salidas_producto
+ * @property \App\Model\Entity\Producto $producto
  */
 class SalidasProductosProducto extends Entity
 {

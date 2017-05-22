@@ -44,6 +44,8 @@ class ProveedoresClientesMaterialTableTest extends TestCase
         'app.palets',
         'app.pedidos_empresas',
         'app.salidas_productos',
+        'app.salidas_productos_producto',
+        'app.productos',
         'app.pedidos_empresas_producto',
         'app.proceso_producto',
         'app.materiales',

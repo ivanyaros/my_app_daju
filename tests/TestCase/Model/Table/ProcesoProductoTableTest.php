@@ -31,18 +31,25 @@ class ProcesoProductoTableTest extends TestCase
         'app.monedas',
         'app.producto',
         'app.ivas',
-        'app.materiales',
-        'app.localizaciones',
-        'app.centros',
-        'app.entradas_material',
-        'app.proveedores_clientes',
+        'app.cajas',
+        'app.objetos',
         'app.ordens',
         'app.estados',
         'app.ordens_estados',
-        'app.objetos',
+        'app.centros',
+        'app.entradas_material',
+        'app.proveedores_clientes',
+        'app.direcciones',
+        'app.pedidos_empresas',
         'app.salidas_productos',
-        'app.proceso_material',
-        'app.proveedores_clientes_material'
+        'app.salidas_productos_producto',
+        'app.productos',
+        'app.pedidos_empresas_producto',
+        'app.proveedores_clientes_material',
+        'app.materiales',
+        'app.localizaciones',
+        'app.palets',
+        'app.proceso_material'
     ];
 
     /**
