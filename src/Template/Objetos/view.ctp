@@ -28,16 +28,28 @@
             <td><?= h($objeto->referencia) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Productoscol') ?></th>
-            <td><?= h($objeto->productoscol) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Orden') ?></th>
             <td><?= $objeto->has('orden') ? $this->Html->link($objeto->orden->id, ['controller' => 'Ordens', 'action' => 'view', $objeto->orden->id]) : '' ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Lote') ?></th>
+            <td><?= h($objeto->lote) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($objeto->id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Localizacione Id') ?></th>
+            <td><?= $this->Number->format($objeto->localizacione_id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Coste') ?></th>
+            <td><?= $this->Number->format($objeto->coste) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Defectuosos') ?></th>
+            <td><?= $this->Number->format($objeto->defectuosos) ?></td>
         </tr>
     </table>
 </div>

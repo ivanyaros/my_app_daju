@@ -53,10 +53,8 @@
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Material Id') ?></th>
-                <th scope="col"><?= __('Nombre') ?></th>
-                <th scope="col"><?= __('Referencia') ?></th>
                 <th scope="col"><?= __('Fecha Entega') ?></th>
-                <th scope="col"><?= __('Localizacion Id') ?></th>
+                <th scope="col"><?= __('Localizacione Id') ?></th>
                 <th scope="col"><?= __('Entradas Material Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -64,10 +62,8 @@
             <tr>
                 <td><?= h($materiales->id) ?></td>
                 <td><?= h($materiales->material_id) ?></td>
-                <td><?= h($materiales->nombre) ?></td>
-                <td><?= h($materiales->referencia) ?></td>
                 <td><?= h($materiales->fecha_entega) ?></td>
-                <td><?= h($materiales->localizacion_id) ?></td>
+                <td><?= h($materiales->localizacione_id) ?></td>
                 <td><?= h($materiales->entradas_material_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Materiales', 'action' => 'view', $materiales->id]) ?>

@@ -90,6 +90,10 @@ class OrdensTable extends Table
             ->dateTime('fecha_terminacion')
             ->allowEmpty('fecha_terminacion');
 
+        $validator
+            ->numeric('scrap')
+            ->allowEmpty('scrap');
+
         return $validator;
     }
 

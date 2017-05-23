@@ -18,7 +18,7 @@
         <?php
             echo $this->Form->control('nombre');
             echo $this->Form->control('referencia');
-            echo $this->Form->control('utilcol');
+            echo $this->Form->control('observaciones');
             echo $this->Form->control('ordens_estados._ids', ['options' => $ordensEstados]);
         ?>
     </fieldset>

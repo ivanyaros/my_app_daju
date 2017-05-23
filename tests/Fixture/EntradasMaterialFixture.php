@@ -57,7 +57,7 @@ class EntradasMaterialFixture extends TestFixture
             'proveedores_cliente_id' => 1,
             'observaciones' => 'Lorem ipsum dolor sit amet',
             'albaran' => 'Lorem ipsum dolor sit amet',
-            'fecha' => '2017-05-22 14:26:00',
+            'fecha' => '2017-05-23 07:34:35',
             'centro_id' => 1
         ],
     ];

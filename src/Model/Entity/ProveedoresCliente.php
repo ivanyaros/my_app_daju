@@ -17,6 +17,7 @@ use Cake\ORM\Entity;
  * @property string $observaciones
  * @property bool $tipo
  * @property bool $visible
+ * @property string $persona_contacto
  *
  * @property \App\Model\Entity\Direccione[] $direcciones
  * @property \App\Model\Entity\EntradasMaterial[] $entradas_material

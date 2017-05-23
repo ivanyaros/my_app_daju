@@ -60,11 +60,11 @@ class ProcesoProductoTable extends Table
             ->allowEmpty('cantidad');
 
         $validator
-            ->allowEmpty('proceso_producto_entradacol');
-
-        $validator
             ->boolean('entrada_salida')
             ->allowEmpty('entrada_salida');
+
+        $validator
+            ->allowEmpty('observaciones');
 
         return $validator;
     }

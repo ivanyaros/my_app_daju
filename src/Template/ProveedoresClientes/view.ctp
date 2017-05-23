@@ -16,8 +16,6 @@
         <li><?= $this->Html->link(__('New Entradas Material'), ['controller' => 'EntradasMaterial', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Pedidos Empresas'), ['controller' => 'PedidosEmpresas', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Pedidos Empresa'), ['controller' => 'PedidosEmpresas', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Salidas Productos'), ['controller' => 'SalidasProductos', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Salidas Producto'), ['controller' => 'SalidasProductos', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Material'), ['controller' => 'Material', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Material'), ['controller' => 'Material', 'action' => 'add']) ?> </li>
     </ul>
@@ -56,6 +54,10 @@
         <tr>
             <th scope="row"><?= __('Observaciones') ?></th>
             <td><?= h($proveedoresCliente->observaciones) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Persona Contacto') ?></th>
+            <td><?= h($proveedoresCliente->persona_contacto) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
@@ -161,39 +163,6 @@
                     <?= $this->Html->link(__('View'), ['controller' => 'PedidosEmpresas', 'action' => 'view', $pedidosEmpresas->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'PedidosEmpresas', 'action' => 'edit', $pedidosEmpresas->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'PedidosEmpresas', 'action' => 'delete', $pedidosEmpresas->id], ['confirm' => __('Are you sure you want to delete # {0}?', $pedidosEmpresas->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
-    </div>
-    <div class="related">
-        <h4><?= __('Related Salidas Productos') ?></h4>
-        <?php if (!empty($proveedoresCliente->salidas_productos)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Proveedores Cliente Id') ?></th>
-                <th scope="col"><?= __('Fecha Pedido') ?></th>
-                <th scope="col"><?= __('Fecha Entrega') ?></th>
-                <th scope="col"><?= __('Albaran') ?></th>
-                <th scope="col"><?= __('Pedidos Empresa Id') ?></th>
-                <th scope="col"><?= __('Centro Id') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($proveedoresCliente->salidas_productos as $salidasProductos): ?>
-            <tr>
-                <td><?= h($salidasProductos->id) ?></td>
-                <td><?= h($salidasProductos->proveedores_cliente_id) ?></td>
-                <td><?= h($salidasProductos->fecha_pedido) ?></td>
-                <td><?= h($salidasProductos->fecha_entrega) ?></td>
-                <td><?= h($salidasProductos->albaran) ?></td>
-                <td><?= h($salidasProductos->pedidos_empresa_id) ?></td>
-                <td><?= h($salidasProductos->centro_id) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'SalidasProductos', 'action' => 'view', $salidasProductos->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'SalidasProductos', 'action' => 'edit', $salidasProductos->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'SalidasProductos', 'action' => 'delete', $salidasProductos->id], ['confirm' => __('Are you sure you want to delete # {0}?', $salidasProductos->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

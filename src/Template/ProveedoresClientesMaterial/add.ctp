@@ -18,6 +18,7 @@
     <fieldset>
         <legend><?= __('Add Proveedores Clientes Material') ?></legend>
         <?php
+            echo $this->Form->control('observaciones');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

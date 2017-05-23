@@ -52,6 +52,10 @@
             <td><?= $this->Number->format($orden->estado_id) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Scrap') ?></th>
+            <td><?= $this->Number->format($orden->scrap) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Fecha Creacion') ?></th>
             <td><?= h($orden->fecha_creacion) ?></td>
         </tr>
@@ -68,8 +72,11 @@
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Producto Id') ?></th>
                 <th scope="col"><?= __('Referencia') ?></th>
-                <th scope="col"><?= __('Productoscol') ?></th>
                 <th scope="col"><?= __('Orden Id') ?></th>
+                <th scope="col"><?= __('Lote') ?></th>
+                <th scope="col"><?= __('Localizacione Id') ?></th>
+                <th scope="col"><?= __('Coste') ?></th>
+                <th scope="col"><?= __('Defectuosos') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($orden->objetos as $objetos): ?>
@@ -77,8 +84,11 @@
                 <td><?= h($objetos->id) ?></td>
                 <td><?= h($objetos->producto_id) ?></td>
                 <td><?= h($objetos->referencia) ?></td>
-                <td><?= h($objetos->productoscol) ?></td>
                 <td><?= h($objetos->orden_id) ?></td>
+                <td><?= h($objetos->lote) ?></td>
+                <td><?= h($objetos->localizacione_id) ?></td>
+                <td><?= h($objetos->coste) ?></td>
+                <td><?= h($objetos->defectuosos) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Objetos', 'action' => 'view', $objetos->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Objetos', 'action' => 'edit', $objetos->id]) ?>
@@ -96,12 +106,14 @@
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Nombre') ?></th>
+                <th scope="col"><?= __('Descripcion') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($orden->estados as $estados): ?>
             <tr>
                 <td><?= h($estados->id) ?></td>
                 <td><?= h($estados->nombre) ?></td>
+                <td><?= h($estados->descripcion) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Estados', 'action' => 'view', $estados->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Estados', 'action' => 'edit', $estados->id]) ?>

@@ -13,7 +13,7 @@ use Cake\Validation\Validator;
  * @property \Cake\ORM\Association\HasMany $Localizaciones
  * @property \Cake\ORM\Association\HasMany $Ordens
  * @property \Cake\ORM\Association\HasMany $Proceso
- * @property \Cake\ORM\Association\HasMany $SalidasProductos
+ * @property \Cake\ORM\Association\HasMany $SalidasObjetos
  *
  * @method \App\Model\Entity\Centro get($primaryKey, $options = [])
  * @method \App\Model\Entity\Centro newEntity($data = null, array $options = [])
@@ -52,7 +52,7 @@ class CentrosTable extends Table
         $this->hasMany('Proceso', [
             'foreignKey' => 'centro_id'
         ]);
-        $this->hasMany('SalidasProductos', [
+        $this->hasMany('SalidasObjetos', [
             'foreignKey' => 'centro_id'
         ]);
     }

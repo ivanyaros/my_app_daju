@@ -22,6 +22,8 @@
                 <th scope="col"><?= $this->Paginator->sort('ordens_estados_estado_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('maquinas_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('operaciones') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('uso') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('observaciones') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -32,6 +34,8 @@
                 <td><?= $ordensEstadosMaquina->has('ordens_estado') ? $this->Html->link($ordensEstadosMaquina->ordens_estado->orden_id, ['controller' => 'OrdensEstados', 'action' => 'view', $ordensEstadosMaquina->ordens_estado->orden_id]) : '' ?></td>
                 <td><?= $ordensEstadosMaquina->has('maquina') ? $this->Html->link($ordensEstadosMaquina->maquina->id, ['controller' => 'Maquinas', 'action' => 'view', $ordensEstadosMaquina->maquina->id]) : '' ?></td>
                 <td><?= $this->Number->format($ordensEstadosMaquina->operaciones) ?></td>
+                <td><?= $this->Number->format($ordensEstadosMaquina->uso) ?></td>
+                <td><?= h($ordensEstadosMaquina->observaciones) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $ordensEstadosMaquina->ordens_estados_orden_id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $ordensEstadosMaquina->ordens_estados_orden_id]) ?>

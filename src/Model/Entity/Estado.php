@@ -8,6 +8,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $nombre
+ * @property string $descripcion
  *
  * @property \App\Model\Entity\Orden[] $ordens
  * @property \App\Model\Entity\OrdensEstado[] $ordens_estados

@@ -22,10 +22,8 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('material_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('nombre') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('referencia') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('fecha_entega') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('localizacion_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('localizacione_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('entradas_material_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -35,10 +33,8 @@
             <tr>
                 <td><?= $this->Number->format($materiale->id) ?></td>
                 <td><?= $materiale->has('material') ? $this->Html->link($materiale->material->id, ['controller' => 'Material', 'action' => 'view', $materiale->material->id]) : '' ?></td>
-                <td><?= h($materiale->nombre) ?></td>
-                <td><?= h($materiale->referencia) ?></td>
                 <td><?= h($materiale->fecha_entega) ?></td>
-                <td><?= $materiale->has('localizacione') ? $this->Html->link($materiale->localizacione->id, ['controller' => 'Localizaciones', 'action' => 'view', $materiale->localizacione->id]) : '' ?></td>
+                <td><?= $this->Number->format($materiale->localizacione_id) ?></td>
                 <td><?= $materiale->has('entradas_material') ? $this->Html->link($materiale->entradas_material->id, ['controller' => 'EntradasMaterial', 'action' => 'view', $materiale->entradas_material->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $materiale->id]) ?>

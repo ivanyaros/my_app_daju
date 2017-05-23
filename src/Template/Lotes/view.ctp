@@ -28,8 +28,16 @@
             <td><?= $this->Number->format($lote->peso) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Metros') ?></th>
-            <td><?= $this->Number->format($lote->metros) ?></td>
+            <th scope="row"><?= __('Metros Iniciales') ?></th>
+            <td><?= $this->Number->format($lote->metros_iniciales) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Metros Actuales') ?></th>
+            <td><?= $this->Number->format($lote->metros_actuales) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Metros Utiles') ?></th>
+            <td><?= $this->Number->format($lote->metros_utiles) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Unidades') ?></th>

@@ -22,6 +22,10 @@
             <td><?= h($estado->nombre) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Descripcion') ?></th>
+            <td><?= h($estado->descripcion) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($estado->id) ?></td>
         </tr>
@@ -40,6 +44,7 @@
                 <th scope="col"><?= __('Estado Id') ?></th>
                 <th scope="col"><?= __('Centro Id') ?></th>
                 <th scope="col"><?= __('Proceso Id') ?></th>
+                <th scope="col"><?= __('Scrap') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($estado->ordens as $ordens): ?>
@@ -53,6 +58,7 @@
                 <td><?= h($ordens->estado_id) ?></td>
                 <td><?= h($ordens->centro_id) ?></td>
                 <td><?= h($ordens->proceso_id) ?></td>
+                <td><?= h($ordens->scrap) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Ordens', 'action' => 'view', $ordens->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Ordens', 'action' => 'edit', $ordens->id]) ?>

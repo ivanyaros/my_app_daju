@@ -34,8 +34,16 @@
             <td><?= $ordensEstado->has('estado') ? $this->Html->link($ordensEstado->estado->id, ['controller' => 'Estados', 'action' => 'view', $ordensEstado->estado->id]) : '' ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Fecha') ?></th>
-            <td><?= h($ordensEstado->fecha) ?></td>
+            <th scope="row"><?= __('Observaciones') ?></th>
+            <td><?= h($ordensEstado->observaciones) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Fecha Inicio') ?></th>
+            <td><?= h($ordensEstado->fecha_inicio) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Fecha Fin') ?></th>
+            <td><?= h($ordensEstado->fecha_fin) ?></td>
         </tr>
     </table>
     <div class="related">
@@ -46,7 +54,7 @@
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Nombre') ?></th>
                 <th scope="col"><?= __('Referencia') ?></th>
-                <th scope="col"><?= __('Utilcol') ?></th>
+                <th scope="col"><?= __('Observaciones') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($ordensEstado->utensilios as $utensilios): ?>
@@ -54,7 +62,7 @@
                 <td><?= h($utensilios->id) ?></td>
                 <td><?= h($utensilios->nombre) ?></td>
                 <td><?= h($utensilios->referencia) ?></td>
-                <td><?= h($utensilios->utilcol) ?></td>
+                <td><?= h($utensilios->observaciones) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Utensilios', 'action' => 'view', $utensilios->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Utensilios', 'action' => 'edit', $utensilios->id]) ?>
@@ -73,7 +81,7 @@
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Nombre') ?></th>
                 <th scope="col"><?= __('Referencia') ?></th>
-                <th scope="col"><?= __('Maquinacol') ?></th>
+                <th scope="col"><?= __('Observaciones') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($ordensEstado->maquinas as $maquinas): ?>
@@ -81,7 +89,7 @@
                 <td><?= h($maquinas->id) ?></td>
                 <td><?= h($maquinas->nombre) ?></td>
                 <td><?= h($maquinas->referencia) ?></td>
-                <td><?= h($maquinas->maquinacol) ?></td>
+                <td><?= h($maquinas->observaciones) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Maquinas', 'action' => 'view', $maquinas->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Maquinas', 'action' => 'edit', $maquinas->id]) ?>

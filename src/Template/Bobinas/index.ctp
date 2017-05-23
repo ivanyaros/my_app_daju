@@ -21,8 +21,9 @@
                 <th scope="col"><?= $this->Paginator->sort('metros_brutos') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('metros_netos') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('metros_actuales') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('metros_utiles') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('scrap') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('en_uso') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('terminado') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -36,8 +37,9 @@
                 <td><?= $this->Number->format($bobina->metros_brutos) ?></td>
                 <td><?= $this->Number->format($bobina->metros_netos) ?></td>
                 <td><?= $this->Number->format($bobina->metros_actuales) ?></td>
+                <td><?= $this->Number->format($bobina->metros_utiles) ?></td>
+                <td><?= $this->Number->format($bobina->scrap) ?></td>
                 <td><?= h($bobina->en_uso) ?></td>
-                <td><?= h($bobina->terminado) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $bobina->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $bobina->id]) ?>

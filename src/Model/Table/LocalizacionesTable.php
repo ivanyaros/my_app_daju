@@ -10,6 +10,8 @@ use Cake\Validation\Validator;
  * Localizaciones Model
  *
  * @property \Cake\ORM\Association\BelongsTo $Centros
+ * @property \Cake\ORM\Association\HasMany $Materiales
+ * @property \Cake\ORM\Association\HasMany $Objetos
  *
  * @method \App\Model\Entity\Localizacione get($primaryKey, $options = [])
  * @method \App\Model\Entity\Localizacione newEntity($data = null, array $options = [])
@@ -38,6 +40,12 @@ class LocalizacionesTable extends Table
 
         $this->belongsTo('Centros', [
             'foreignKey' => 'centro_id'
+        ]);
+        $this->hasMany('Materiales', [
+            'foreignKey' => 'localizacione_id'
+        ]);
+        $this->hasMany('Objetos', [
+            'foreignKey' => 'localizacione_id'
         ]);
     }
 

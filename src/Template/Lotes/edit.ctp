@@ -22,7 +22,9 @@
         <?php
             echo $this->Form->control('lote');
             echo $this->Form->control('peso');
-            echo $this->Form->control('metros');
+            echo $this->Form->control('metros_iniciales');
+            echo $this->Form->control('metros_actuales');
+            echo $this->Form->control('metros_utiles');
             echo $this->Form->control('unidades');
         ?>
     </fieldset>

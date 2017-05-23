@@ -26,8 +26,9 @@
             echo $this->Form->control('metros_brutos');
             echo $this->Form->control('metros_netos');
             echo $this->Form->control('metros_actuales');
+            echo $this->Form->control('metros_utiles');
+            echo $this->Form->control('scrap');
             echo $this->Form->control('en_uso');
-            echo $this->Form->control('terminado');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

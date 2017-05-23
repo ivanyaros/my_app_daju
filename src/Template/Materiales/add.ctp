@@ -20,10 +20,8 @@
     <fieldset>
         <legend><?= __('Add Materiale') ?></legend>
         <?php
-            echo $this->Form->control('nombre');
-            echo $this->Form->control('referencia');
             echo $this->Form->control('fecha_entega', ['empty' => true]);
-            echo $this->Form->control('localizacion_id', ['options' => $localizaciones, 'empty' => true]);
+            echo $this->Form->control('localizacione_id');
             echo $this->Form->control('entradas_material_id', ['options' => $entradasMaterial, 'empty' => true]);
         ?>
     </fieldset>

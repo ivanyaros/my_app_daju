@@ -12,7 +12,7 @@ use Cake\Validation\Validator;
  * @property \Cake\ORM\Association\HasMany $Direcciones
  * @property \Cake\ORM\Association\HasMany $EntradasMaterial
  * @property \Cake\ORM\Association\HasMany $PedidosEmpresas
- * @property \Cake\ORM\Association\HasMany $SalidasProductos
+ * @property \Cake\ORM\Association\HasMany $SalidasObjetos
  * @property \Cake\ORM\Association\BelongsToMany $Material
  *
  * @method \App\Model\Entity\ProveedoresCliente get($primaryKey, $options = [])
@@ -49,7 +49,7 @@ class ProveedoresClientesTable extends Table
         $this->hasMany('PedidosEmpresas', [
             'foreignKey' => 'proveedores_cliente_id'
         ]);
-        $this->hasMany('SalidasProductos', [
+        $this->hasMany('SalidasObjetos', [
             'foreignKey' => 'proveedores_cliente_id'
         ]);
         $this->belongsToMany('Material', [
@@ -102,6 +102,9 @@ class ProveedoresClientesTable extends Table
         $validator
             ->boolean('visible')
             ->allowEmpty('visible');
+
+        $validator
+            ->allowEmpty('persona_contacto');
 
         return $validator;
     }

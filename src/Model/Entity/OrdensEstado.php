@@ -8,7 +8,9 @@ use Cake\ORM\Entity;
  *
  * @property int $orden_id
  * @property int $estado_id
- * @property \Cake\I18n\FrozenTime $fecha
+ * @property \Cake\I18n\FrozenTime $fecha_inicio
+ * @property \Cake\I18n\FrozenTime $fecha_fin
+ * @property string $observaciones
  *
  * @property \App\Model\Entity\Orden $orden
  * @property \App\Model\Entity\Estado $estado

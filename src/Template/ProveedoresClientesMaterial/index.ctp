@@ -20,6 +20,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('proveedores_cliente_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('material_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('observaciones') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -28,6 +29,7 @@
             <tr>
                 <td><?= $proveedoresClientesMaterial->has('proveedores_cliente') ? $this->Html->link($proveedoresClientesMaterial->proveedores_cliente->id, ['controller' => 'ProveedoresClientes', 'action' => 'view', $proveedoresClientesMaterial->proveedores_cliente->id]) : '' ?></td>
                 <td><?= $proveedoresClientesMaterial->has('material') ? $this->Html->link($proveedoresClientesMaterial->material->id, ['controller' => 'Material', 'action' => 'view', $proveedoresClientesMaterial->material->id]) : '' ?></td>
+                <td><?= h($proveedoresClientesMaterial->observaciones) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $proveedoresClientesMaterial->proveedores_cliente_id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $proveedoresClientesMaterial->proveedores_cliente_id]) ?>

@@ -62,7 +62,7 @@ class MaquinasTable extends Table
             ->allowEmpty('referencia');
 
         $validator
-            ->allowEmpty('maquinacol');
+            ->allowEmpty('observaciones');
 
         return $validator;
     }

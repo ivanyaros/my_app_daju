@@ -43,7 +43,7 @@ class MaterialesTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->belongsTo('Localizaciones', [
-            'foreignKey' => 'localizacion_id'
+            'foreignKey' => 'localizacione_id'
         ]);
         $this->belongsTo('EntradasMaterial', [
             'foreignKey' => 'entradas_material_id'
@@ -63,12 +63,6 @@ class MaterialesTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->allowEmpty('nombre');
-
-        $validator
-            ->allowEmpty('referencia');
-
-        $validator
             ->dateTime('fecha_entega')
             ->allowEmpty('fecha_entega');
 
@@ -85,7 +79,7 @@ class MaterialesTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['material_id'], 'Material'));
-        $rules->add($rules->existsIn(['localizacion_id'], 'Localizaciones'));
+        $rules->add($rules->existsIn(['localizacione_id'], 'Localizaciones'));
         $rules->add($rules->existsIn(['entradas_material_id'], 'EntradasMaterial'));
 
         return $rules;

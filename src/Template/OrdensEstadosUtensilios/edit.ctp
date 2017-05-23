@@ -24,6 +24,7 @@
     <fieldset>
         <legend><?= __('Edit Ordens Estados Utensilio') ?></legend>
         <?php
+            echo $this->Form->control('observaciones');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

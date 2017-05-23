@@ -21,8 +21,11 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('producto_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('referencia') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('productoscol') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('orden_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('lote') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('localizacione_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('coste') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('defectuosos') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -32,8 +35,11 @@
                 <td><?= $this->Number->format($objeto->id) ?></td>
                 <td><?= $objeto->has('producto') ? $this->Html->link($objeto->producto->id, ['controller' => 'Producto', 'action' => 'view', $objeto->producto->id]) : '' ?></td>
                 <td><?= h($objeto->referencia) ?></td>
-                <td><?= h($objeto->productoscol) ?></td>
                 <td><?= $objeto->has('orden') ? $this->Html->link($objeto->orden->id, ['controller' => 'Ordens', 'action' => 'view', $objeto->orden->id]) : '' ?></td>
+                <td><?= h($objeto->lote) ?></td>
+                <td><?= $this->Number->format($objeto->localizacione_id) ?></td>
+                <td><?= $this->Number->format($objeto->coste) ?></td>
+                <td><?= $this->Number->format($objeto->defectuosos) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $objeto->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $objeto->id]) ?>

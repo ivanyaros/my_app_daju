@@ -62,6 +62,9 @@ class EstadosTable extends Table
         $validator
             ->allowEmpty('nombre');
 
+        $validator
+            ->allowEmpty('descripcion');
+
         return $validator;
     }
 }

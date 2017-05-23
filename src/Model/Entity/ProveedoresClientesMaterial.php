@@ -8,6 +8,7 @@ use Cake\ORM\Entity;
  *
  * @property int $proveedores_cliente_id
  * @property int $material_id
+ * @property string $observaciones
  *
  * @property \App\Model\Entity\ProveedoresCliente $proveedores_cliente
  * @property \App\Model\Entity\Material $material

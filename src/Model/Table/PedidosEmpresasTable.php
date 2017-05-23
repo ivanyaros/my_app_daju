@@ -10,7 +10,7 @@ use Cake\Validation\Validator;
  * PedidosEmpresas Model
  *
  * @property \Cake\ORM\Association\BelongsTo $ProveedoresClientes
- * @property \Cake\ORM\Association\HasMany $SalidasProductos
+ * @property \Cake\ORM\Association\HasMany $SalidasObjetos
  * @property \Cake\ORM\Association\BelongsToMany $Producto
  *
  * @method \App\Model\Entity\PedidosEmpresa get($primaryKey, $options = [])
@@ -41,7 +41,7 @@ class PedidosEmpresasTable extends Table
         $this->belongsTo('ProveedoresClientes', [
             'foreignKey' => 'proveedores_cliente_id'
         ]);
-        $this->hasMany('SalidasProductos', [
+        $this->hasMany('SalidasObjetos', [
             'foreignKey' => 'pedidos_empresa_id'
         ]);
         $this->belongsToMany('Producto', [

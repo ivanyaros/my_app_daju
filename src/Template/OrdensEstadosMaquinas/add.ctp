@@ -19,6 +19,8 @@
         <legend><?= __('Add Ordens Estados Maquina') ?></legend>
         <?php
             echo $this->Form->control('operaciones');
+            echo $this->Form->control('uso');
+            echo $this->Form->control('observaciones');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

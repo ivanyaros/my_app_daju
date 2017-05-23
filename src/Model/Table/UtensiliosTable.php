@@ -62,7 +62,7 @@ class UtensiliosTable extends Table
             ->allowEmpty('referencia');
 
         $validator
-            ->allowEmpty('utilcol');
+            ->allowEmpty('observaciones');
 
         return $validator;
     }

@@ -19,7 +19,7 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('nombre') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('referencia') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('utilcol') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('observaciones') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -29,7 +29,7 @@
                 <td><?= $this->Number->format($utensilio->id) ?></td>
                 <td><?= h($utensilio->nombre) ?></td>
                 <td><?= h($utensilio->referencia) ?></td>
-                <td><?= h($utensilio->utilcol) ?></td>
+                <td><?= h($utensilio->observaciones) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $utensilio->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $utensilio->id]) ?>

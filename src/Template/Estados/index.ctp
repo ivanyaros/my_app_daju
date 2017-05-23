@@ -18,6 +18,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('nombre') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('descripcion') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -26,6 +27,7 @@
             <tr>
                 <td><?= $this->Number->format($estado->id) ?></td>
                 <td><?= h($estado->nombre) ?></td>
+                <td><?= h($estado->descripcion) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $estado->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $estado->id]) ?>

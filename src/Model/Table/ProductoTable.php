@@ -12,9 +12,7 @@ use Cake\Validation\Validator;
  * @property \Cake\ORM\Association\BelongsTo $Familias
  * @property \Cake\ORM\Association\BelongsTo $Monedas
  * @property \Cake\ORM\Association\BelongsTo $Ivas
- * @property \Cake\ORM\Association\HasMany $Cajas
  * @property \Cake\ORM\Association\HasMany $Objetos
- * @property \Cake\ORM\Association\HasMany $Palets
  * @property \Cake\ORM\Association\BelongsToMany $PedidosEmpresas
  * @property \Cake\ORM\Association\BelongsToMany $Proceso
  *
@@ -52,13 +50,7 @@ class ProductoTable extends Table
         $this->belongsTo('Ivas', [
             'foreignKey' => 'iva_id'
         ]);
-        $this->hasMany('Cajas', [
-            'foreignKey' => 'producto_id'
-        ]);
         $this->hasMany('Objetos', [
-            'foreignKey' => 'producto_id'
-        ]);
-        $this->hasMany('Palets', [
             'foreignKey' => 'producto_id'
         ]);
         $this->belongsToMany('PedidosEmpresas', [
@@ -92,6 +84,9 @@ class ProductoTable extends Table
             ->allowEmpty('referencia');
 
         $validator
+            ->allowEmpty('referencia_proveedor');
+
+        $validator
             ->numeric('precio')
             ->allowEmpty('precio');
 
@@ -101,6 +96,24 @@ class ProductoTable extends Table
         $validator
             ->boolean('visible')
             ->allowEmpty('visible');
+
+        $validator
+            ->numeric('peso')
+            ->allowEmpty('peso');
+
+        $validator
+            ->integer('cantidad')
+            ->allowEmpty('cantidad');
+
+        $validator
+            ->allowEmpty('descripcion');
+
+        $validator
+            ->allowEmpty('larga');
+
+        $validator
+            ->numeric('coste')
+            ->allowEmpty('coste');
 
         return $validator;
     }

@@ -55,8 +55,16 @@ class LotesTable extends Table
             ->allowEmpty('peso');
 
         $validator
-            ->numeric('metros')
-            ->allowEmpty('metros');
+            ->numeric('metros_iniciales')
+            ->allowEmpty('metros_iniciales');
+
+        $validator
+            ->numeric('metros_actuales')
+            ->allowEmpty('metros_actuales');
+
+        $validator
+            ->numeric('metros_utiles')
+            ->allowEmpty('metros_utiles');
 
         $validator
             ->integer('unidades')

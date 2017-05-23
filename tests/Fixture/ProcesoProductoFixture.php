@@ -27,9 +27,9 @@ class ProcesoProductoFixture extends TestFixture
         'proceso_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'producto_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'cantidad' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'proceso_producto_entradacol' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'entrada_salida' => ['type' => 'boolean', 'length' => null, 'null' => true, 'default' => '0', 'comment' => '0-entrada
 1-salida', 'precision' => null],
+        'observaciones' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         '_indexes' => [
             'fk_proceso_has_producto_producto1_idx' => ['type' => 'index', 'columns' => ['producto_id'], 'length' => []],
             'fk_proceso_has_producto_proceso1_idx' => ['type' => 'index', 'columns' => ['proceso_id'], 'length' => []],
@@ -56,8 +56,8 @@ class ProcesoProductoFixture extends TestFixture
             'proceso_id' => 1,
             'producto_id' => 1,
             'cantidad' => 1,
-            'proceso_producto_entradacol' => 'Lorem ipsum dolor sit amet',
-            'entrada_salida' => 1
+            'entrada_salida' => 1,
+            'observaciones' => 'Lorem ipsum dolor sit amet'
         ],
     ];
 }

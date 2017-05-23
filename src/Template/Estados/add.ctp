@@ -17,6 +17,7 @@
         <legend><?= __('Add Estado') ?></legend>
         <?php
             echo $this->Form->control('nombre');
+            echo $this->Form->control('descripcion');
             echo $this->Form->control('ordens._ids', ['options' => $ordens]);
         ?>
     </fieldset>

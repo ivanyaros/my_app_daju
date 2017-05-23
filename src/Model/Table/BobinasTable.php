@@ -71,10 +71,16 @@ class BobinasTable extends Table
             ->allowEmpty('metros_actuales');
 
         $validator
-            ->allowEmpty('en_uso');
+            ->numeric('metros_utiles')
+            ->allowEmpty('metros_utiles');
 
         $validator
-            ->allowEmpty('terminado');
+            ->numeric('scrap')
+            ->allowEmpty('scrap');
+
+        $validator
+            ->boolean('en_uso')
+            ->allowEmpty('en_uso');
 
         return $validator;
     }

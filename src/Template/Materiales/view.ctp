@@ -26,24 +26,16 @@
             <td><?= $materiale->has('material') ? $this->Html->link($materiale->material->id, ['controller' => 'Material', 'action' => 'view', $materiale->material->id]) : '' ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Nombre') ?></th>
-            <td><?= h($materiale->nombre) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Referencia') ?></th>
-            <td><?= h($materiale->referencia) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Localizacione') ?></th>
-            <td><?= $materiale->has('localizacione') ? $this->Html->link($materiale->localizacione->id, ['controller' => 'Localizaciones', 'action' => 'view', $materiale->localizacione->id]) : '' ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Entradas Material') ?></th>
             <td><?= $materiale->has('entradas_material') ? $this->Html->link($materiale->entradas_material->id, ['controller' => 'EntradasMaterial', 'action' => 'view', $materiale->entradas_material->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($materiale->id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Localizacione Id') ?></th>
+            <td><?= $this->Number->format($materiale->localizacione_id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Fecha Entega') ?></th>

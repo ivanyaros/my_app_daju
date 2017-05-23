@@ -9,8 +9,11 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property int $producto_id
  * @property string $referencia
- * @property string $productoscol
  * @property int $orden_id
+ * @property string $lote
+ * @property int $localizacione_id
+ * @property float $coste
+ * @property int $defectuosos
  *
  * @property \App\Model\Entity\Producto $producto
  * @property \App\Model\Entity\Orden $orden

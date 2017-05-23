@@ -28,12 +28,20 @@
             <td><?= $ordensEstadosMaquina->has('maquina') ? $this->Html->link($ordensEstadosMaquina->maquina->id, ['controller' => 'Maquinas', 'action' => 'view', $ordensEstadosMaquina->maquina->id]) : '' ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Observaciones') ?></th>
+            <td><?= h($ordensEstadosMaquina->observaciones) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Ordens Estados Orden Id') ?></th>
             <td><?= $this->Number->format($ordensEstadosMaquina->ordens_estados_orden_id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Operaciones') ?></th>
             <td><?= $this->Number->format($ordensEstadosMaquina->operaciones) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Uso') ?></th>
+            <td><?= $this->Number->format($ordensEstadosMaquina->uso) ?></td>
         </tr>
     </table>
 </div>

@@ -24,7 +24,9 @@
     <fieldset>
         <legend><?= __('Add Ordens Estado') ?></legend>
         <?php
-            echo $this->Form->control('fecha', ['empty' => true]);
+            echo $this->Form->control('fecha_inicio', ['empty' => true]);
+            echo $this->Form->control('fecha_fin', ['empty' => true]);
+            echo $this->Form->control('observaciones');
             echo $this->Form->control('utensilios._ids', ['options' => $utensilios]);
             echo $this->Form->control('maquinas._ids', ['options' => $maquinas]);
             echo $this->Form->control('usuarios._ids', ['options' => $usuarios]);

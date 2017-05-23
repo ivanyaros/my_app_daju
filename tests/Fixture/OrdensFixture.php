@@ -26,6 +26,7 @@ class OrdensFixture extends TestFixture
         'estado_id' => ['type' => 'integer', 'length' => 8, 'unsigned' => true, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'centro_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'proceso_id' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'scrap' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
         '_indexes' => [
             'fk_ordenes_produccion_centros1_idx' => ['type' => 'index', 'columns' => ['centro_id'], 'length' => []],
             'fk_ordenes_produccion_estados1_idx' => ['type' => 'index', 'columns' => ['estado_id'], 'length' => []],
@@ -55,11 +56,12 @@ class OrdensFixture extends TestFixture
             'nombre' => 'Lorem ipsum dolor sit amet',
             'referencia' => 'Lorem ipsum dolor sit amet',
             'cantidad' => 1,
-            'fecha_creacion' => '2017-05-22 14:26:02',
-            'fecha_terminacion' => '2017-05-22 14:26:02',
+            'fecha_creacion' => '2017-05-23 07:34:38',
+            'fecha_terminacion' => '2017-05-23 07:34:38',
             'estado_id' => 1,
             'centro_id' => 1,
-            'proceso_id' => 1
+            'proceso_id' => 1,
+            'scrap' => 1
         ],
     ];
 }

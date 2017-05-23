@@ -92,6 +92,7 @@
                 <th scope="col"><?= __('Estado Id') ?></th>
                 <th scope="col"><?= __('Centro Id') ?></th>
                 <th scope="col"><?= __('Proceso Id') ?></th>
+                <th scope="col"><?= __('Scrap') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($proceso->ordens as $ordens): ?>
@@ -105,6 +106,7 @@
                 <td><?= h($ordens->estado_id) ?></td>
                 <td><?= h($ordens->centro_id) ?></td>
                 <td><?= h($ordens->proceso_id) ?></td>
+                <td><?= h($ordens->scrap) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Ordens', 'action' => 'view', $ordens->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Ordens', 'action' => 'edit', $ordens->id]) ?>
@@ -174,12 +176,18 @@
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Nombre') ?></th>
                 <th scope="col"><?= __('Referencia') ?></th>
+                <th scope="col"><?= __('Referencia Proveedor') ?></th>
                 <th scope="col"><?= __('Familia Id') ?></th>
                 <th scope="col"><?= __('Precio') ?></th>
                 <th scope="col"><?= __('Moneda Id') ?></th>
                 <th scope="col"><?= __('Iva Id') ?></th>
                 <th scope="col"><?= __('Observaciones') ?></th>
                 <th scope="col"><?= __('Visible') ?></th>
+                <th scope="col"><?= __('Peso') ?></th>
+                <th scope="col"><?= __('Cantidad') ?></th>
+                <th scope="col"><?= __('Descripcion') ?></th>
+                <th scope="col"><?= __('Larga') ?></th>
+                <th scope="col"><?= __('Coste') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($proceso->producto as $producto): ?>
@@ -187,12 +195,18 @@
                 <td><?= h($producto->id) ?></td>
                 <td><?= h($producto->nombre) ?></td>
                 <td><?= h($producto->referencia) ?></td>
+                <td><?= h($producto->referencia_proveedor) ?></td>
                 <td><?= h($producto->familia_id) ?></td>
                 <td><?= h($producto->precio) ?></td>
                 <td><?= h($producto->moneda_id) ?></td>
                 <td><?= h($producto->iva_id) ?></td>
                 <td><?= h($producto->observaciones) ?></td>
                 <td><?= h($producto->visible) ?></td>
+                <td><?= h($producto->peso) ?></td>
+                <td><?= h($producto->cantidad) ?></td>
+                <td><?= h($producto->descripcion) ?></td>
+                <td><?= h($producto->larga) ?></td>
+                <td><?= h($producto->coste) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Producto', 'action' => 'view', $producto->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Producto', 'action' => 'edit', $producto->id]) ?>

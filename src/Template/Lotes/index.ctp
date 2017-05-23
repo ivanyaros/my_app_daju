@@ -17,7 +17,9 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('lote') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('peso') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('metros') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('metros_iniciales') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('metros_actuales') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('metros_utiles') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('unidades') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -28,7 +30,9 @@
                 <td><?= $this->Number->format($lote->id) ?></td>
                 <td><?= h($lote->lote) ?></td>
                 <td><?= $this->Number->format($lote->peso) ?></td>
-                <td><?= $this->Number->format($lote->metros) ?></td>
+                <td><?= $this->Number->format($lote->metros_iniciales) ?></td>
+                <td><?= $this->Number->format($lote->metros_actuales) ?></td>
+                <td><?= $this->Number->format($lote->metros_utiles) ?></td>
                 <td><?= $this->Number->format($lote->unidades) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $lote->id]) ?>

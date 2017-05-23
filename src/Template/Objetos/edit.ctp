@@ -26,8 +26,11 @@
         <?php
             echo $this->Form->control('producto_id', ['options' => $producto, 'empty' => true]);
             echo $this->Form->control('referencia');
-            echo $this->Form->control('productoscol');
             echo $this->Form->control('orden_id', ['options' => $ordens]);
+            echo $this->Form->control('lote');
+            echo $this->Form->control('localizacione_id');
+            echo $this->Form->control('coste');
+            echo $this->Form->control('defectuosos');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

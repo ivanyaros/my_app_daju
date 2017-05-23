@@ -13,8 +13,6 @@
         <li><?= $this->Html->link(__('New Entradas Material'), ['controller' => 'EntradasMaterial', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Pedidos Empresas'), ['controller' => 'PedidosEmpresas', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Pedidos Empresa'), ['controller' => 'PedidosEmpresas', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Salidas Productos'), ['controller' => 'SalidasProductos', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Salidas Producto'), ['controller' => 'SalidasProductos', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Material'), ['controller' => 'Material', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Material'), ['controller' => 'Material', 'action' => 'add']) ?></li>
     </ul>
@@ -35,6 +33,7 @@
                 <th scope="col"><?= $this->Paginator->sort('observaciones') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('tipo') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('visible') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('persona_contacto') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -52,6 +51,7 @@
                 <td><?= h($proveedoresCliente->observaciones) ?></td>
                 <td><?= h($proveedoresCliente->tipo) ?></td>
                 <td><?= h($proveedoresCliente->visible) ?></td>
+                <td><?= h($proveedoresCliente->persona_contacto) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $proveedoresCliente->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $proveedoresCliente->id]) ?>

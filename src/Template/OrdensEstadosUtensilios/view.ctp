@@ -28,6 +28,10 @@
             <td><?= $ordensEstadosUtensilio->has('utensilio') ? $this->Html->link($ordensEstadosUtensilio->utensilio->id, ['controller' => 'Utensilios', 'action' => 'view', $ordensEstadosUtensilio->utensilio->id]) : '' ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Observaciones') ?></th>
+            <td><?= h($ordensEstadosUtensilio->observaciones) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Ordens Estados Orden Id') ?></th>
             <td><?= $this->Number->format($ordensEstadosUtensilio->ordens_estados_orden_id) ?></td>
         </tr>

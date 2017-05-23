@@ -20,7 +20,6 @@
     <fieldset>
         <legend><?= __('Add Familia') ?></legend>
         <?php
-            /*echo $this->Form->control('id',['type'=>'integer']);*/
             echo $this->Form->control('nombre');
             echo $this->Form->control('observaciones');
         ?>

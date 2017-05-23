@@ -13,8 +13,9 @@ use Cake\ORM\Entity;
  * @property float $metros_brutos
  * @property float $metros_netos
  * @property float $metros_actuales
- * @property string $en_uso
- * @property string $terminado
+ * @property float $metros_utiles
+ * @property float $scrap
+ * @property bool $en_uso
  */
 class Bobina extends Entity
 {

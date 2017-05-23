@@ -8,10 +8,8 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property int $material_id
- * @property string $nombre
- * @property string $referencia
  * @property \Cake\I18n\FrozenTime $fecha_entega
- * @property int $localizacion_id
+ * @property int $localizacione_id
  * @property int $entradas_material_id
  *
  * @property \App\Model\Entity\Material $material

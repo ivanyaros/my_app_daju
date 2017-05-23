@@ -28,6 +28,7 @@ class ProveedoresClientesFixture extends TestFixture
         'observaciones' => ['type' => 'string', 'length' => 1024, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'tipo' => ['type' => 'boolean', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'visible' => ['type' => 'boolean', 'length' => null, 'null' => true, 'default' => '1', 'comment' => '', 'precision' => null],
+        'persona_contacto' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
         ],
@@ -55,7 +56,8 @@ class ProveedoresClientesFixture extends TestFixture
             'NIF_CIF' => 'Lorem ipsum dolor ',
             'observaciones' => 'Lorem ipsum dolor sit amet',
             'tipo' => 1,
-            'visible' => 1
+            'visible' => 1,
+            'persona_contacto' => 'Lorem ipsum dolor sit amet'
         ],
     ];
 }

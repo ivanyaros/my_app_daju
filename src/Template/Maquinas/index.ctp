@@ -19,7 +19,7 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('nombre') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('referencia') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('maquinacol') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('observaciones') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -29,7 +29,7 @@
                 <td><?= $this->Number->format($maquina->id) ?></td>
                 <td><?= h($maquina->nombre) ?></td>
                 <td><?= h($maquina->referencia) ?></td>
-                <td><?= h($maquina->maquinacol) ?></td>
+                <td><?= h($maquina->observaciones) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $maquina->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $maquina->id]) ?>

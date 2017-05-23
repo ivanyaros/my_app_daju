@@ -48,7 +48,7 @@ class PedidosEmpresasFixture extends TestFixture
             'nombre' => 'Lorem ipsum dolor sit amet',
             'referencia' => 'Lorem ipsum dolor sit amet',
             'proveedores_cliente_id' => 1,
-            'fecha' => '2017-05-22 14:26:03',
+            'fecha' => '2017-05-23 07:34:38',
             'albaran' => 'Lorem ipsum dolor sit amet'
         ],
     ];

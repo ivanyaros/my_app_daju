@@ -64,6 +64,13 @@ class OrdensEstadosMaquinasTable extends Table
             ->integer('operaciones')
             ->allowEmpty('operaciones');
 
+        $validator
+            ->numeric('uso')
+            ->allowEmpty('uso');
+
+        $validator
+            ->allowEmpty('observaciones');
+
         return $validator;
     }
 

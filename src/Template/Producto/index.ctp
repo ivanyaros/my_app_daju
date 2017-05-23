@@ -13,18 +13,12 @@
         <li><?= $this->Html->link(__('New Moneda'), ['controller' => 'Monedas', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Ivas'), ['controller' => 'Ivas', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Iva'), ['controller' => 'Ivas', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Cajas'), ['controller' => 'Cajas', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Caja'), ['controller' => 'Cajas', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Objetos'), ['controller' => 'Objetos', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Objeto'), ['controller' => 'Objetos', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Palets'), ['controller' => 'Palets', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Palet'), ['controller' => 'Palets', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Pedidos Empresas'), ['controller' => 'PedidosEmpresas', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Pedidos Empresa'), ['controller' => 'PedidosEmpresas', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Proceso'), ['controller' => 'Proceso', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Proceso'), ['controller' => 'Proceso', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Salidas Productos'), ['controller' => 'SalidasProductos', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Salidas Producto'), ['controller' => 'SalidasProductos', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="producto index large-9 medium-8 columns content">
@@ -35,12 +29,18 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('nombre') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('referencia') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('referencia_proveedor') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('familia_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('precio') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('moneda_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('iva_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('observaciones') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('visible') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('peso') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('cantidad') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('descripcion') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('larga') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('coste') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -50,12 +50,18 @@
                 <td><?= $this->Number->format($producto->id) ?></td>
                 <td><?= h($producto->nombre) ?></td>
                 <td><?= h($producto->referencia) ?></td>
+                <td><?= h($producto->referencia_proveedor) ?></td>
                 <td><?= $producto->has('familia') ? $this->Html->link($producto->familia->id, ['controller' => 'Familias', 'action' => 'view', $producto->familia->id]) : '' ?></td>
                 <td><?= $this->Number->format($producto->precio) ?></td>
                 <td><?= $producto->has('moneda') ? $this->Html->link($producto->moneda->id, ['controller' => 'Monedas', 'action' => 'view', $producto->moneda->id]) : '' ?></td>
                 <td><?= $producto->has('iva') ? $this->Html->link($producto->iva->id, ['controller' => 'Ivas', 'action' => 'view', $producto->iva->id]) : '' ?></td>
                 <td><?= h($producto->observaciones) ?></td>
                 <td><?= h($producto->visible) ?></td>
+                <td><?= $this->Number->format($producto->peso) ?></td>
+                <td><?= $this->Number->format($producto->cantidad) ?></td>
+                <td><?= h($producto->descripcion) ?></td>
+                <td><?= h($producto->larga) ?></td>
+                <td><?= $this->Number->format($producto->coste) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $producto->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $producto->id]) ?>

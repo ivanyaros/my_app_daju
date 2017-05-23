@@ -10,6 +10,8 @@ use Cake\ORM\Entity;
  * @property int $ordens_estados_estado_id
  * @property int $maquinas_id
  * @property int $operaciones
+ * @property float $uso
+ * @property string $observaciones
  *
  * @property \App\Model\Entity\OrdensEstado $ordens_estado
  * @property \App\Model\Entity\Maquina $maquina

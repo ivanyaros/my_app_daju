@@ -9,7 +9,9 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $lote
  * @property float $peso
- * @property float $metros
+ * @property float $metros_iniciales
+ * @property float $metros_actuales
+ * @property float $metros_utiles
  * @property int $unidades
  */
 class Lote extends Entity

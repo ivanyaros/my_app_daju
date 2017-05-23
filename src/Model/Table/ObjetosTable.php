@@ -11,6 +11,9 @@ use Cake\Validation\Validator;
  *
  * @property \Cake\ORM\Association\BelongsTo $Producto
  * @property \Cake\ORM\Association\BelongsTo $Ordens
+ * @property \Cake\ORM\Association\BelongsTo $Localizaciones
+ * @property \Cake\ORM\Association\BelongsToMany $Materiales
+ * @property \Cake\ORM\Association\BelongsToMany $Objetos
  *
  * @method \App\Model\Entity\Objeto get($primaryKey, $options = [])
  * @method \App\Model\Entity\Objeto newEntity($data = null, array $options = [])
@@ -44,6 +47,20 @@ class ObjetosTable extends Table
             'foreignKey' => 'orden_id',
             'joinType' => 'INNER'
         ]);
+        $this->belongsTo('Localizaciones', [
+            'foreignKey' => 'localizacione_id',
+            'joinType' => 'INNER'
+        ]);
+        $this->belongsToMany('Materiales', [
+            'foreignKey' => 'objeto_id',
+            'targetForeignKey' => 'materiale_id',
+            'joinTable' => 'objetos_materiales'
+        ]);
+        $this->belongsToMany('Objetos', [
+            'foreignKey' => 'objeto_id',
+            'targetForeignKey' => 'objeto_id',
+            'joinTable' => 'objetos_objetos'
+        ]);
     }
 
     /**
@@ -62,7 +79,15 @@ class ObjetosTable extends Table
             ->allowEmpty('referencia');
 
         $validator
-            ->allowEmpty('productoscol');
+            ->allowEmpty('lote');
+
+        $validator
+            ->numeric('coste')
+            ->allowEmpty('coste');
+
+        $validator
+            ->integer('defectuosos')
+            ->allowEmpty('defectuosos');
 
         return $validator;
     }
@@ -78,6 +103,7 @@ class ObjetosTable extends Table
     {
         $rules->add($rules->existsIn(['producto_id'], 'Producto'));
         $rules->add($rules->existsIn(['orden_id'], 'Ordens'));
+        $rules->add($rules->existsIn(['localizacione_id'], 'Localizaciones'));
 
         return $rules;
     }

@@ -56,8 +56,15 @@ class OrdensEstadosTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->dateTime('fecha')
-            ->allowEmpty('fecha');
+            ->dateTime('fecha_inicio')
+            ->allowEmpty('fecha_inicio');
+
+        $validator
+            ->dateTime('fecha_fin')
+            ->allowEmpty('fecha_fin');
+
+        $validator
+            ->allowEmpty('observaciones');
 
         return $validator;
     }

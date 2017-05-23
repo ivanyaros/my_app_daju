@@ -20,14 +20,6 @@
             <td><?= h($bobina->lote) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('En Uso') ?></th>
-            <td><?= h($bobina->en_uso) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Terminado') ?></th>
-            <td><?= h($bobina->terminado) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($bobina->id) ?></td>
         </tr>
@@ -50,6 +42,18 @@
         <tr>
             <th scope="row"><?= __('Metros Actuales') ?></th>
             <td><?= $this->Number->format($bobina->metros_actuales) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Metros Utiles') ?></th>
+            <td><?= $this->Number->format($bobina->metros_utiles) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Scrap') ?></th>
+            <td><?= $this->Number->format($bobina->scrap) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('En Uso') ?></th>
+            <td><?= $bobina->en_uso ? __('Yes') : __('No'); ?></td>
         </tr>
     </table>
 </div>

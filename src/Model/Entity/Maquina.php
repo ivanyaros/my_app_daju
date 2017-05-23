@@ -9,7 +9,7 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $nombre
  * @property string $referencia
- * @property string $maquinacol
+ * @property string $observaciones
  *
  * @property \App\Model\Entity\OrdensEstado[] $ordens_estados
  */
