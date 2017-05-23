@@ -38,12 +38,10 @@ class ProcesoProductoTable extends Table
         $this->setPrimaryKey(['proceso_id', 'producto_id']);
 
         $this->belongsTo('Proceso', [
-            'foreignKey' => 'proceso_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'proceso_id'
         ]);
         $this->belongsTo('Producto', [
-            'foreignKey' => 'producto_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'producto_id'
         ]);
     }
 
@@ -56,15 +54,16 @@ class ProcesoProductoTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
             ->integer('cantidad')
             ->allowEmpty('cantidad');
 
         $validator
             ->boolean('entrada_salida')
             ->allowEmpty('entrada_salida');
-
-        $validator
-            ->allowEmpty('observaciones');
 
         return $validator;
     }

@@ -6,9 +6,9 @@ use Cake\ORM\Entity;
 /**
  * OrdensEstadosUtensilio Entity
  *
- * @property int $ordens_estados_orden_id
- * @property int $ordens_estados_estado_id
- * @property int $utensilios_id
+ * @property int $id
+ * @property int $ordens_estado_id
+ * @property int $utensilio_id
  * @property string $observaciones
  *
  * @property \App\Model\Entity\OrdensEstado $ordens_estado

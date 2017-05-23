@@ -20,6 +20,9 @@ class ObjetosObjetosController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['Objetos']
+        ];
         $objetosObjetos = $this->paginate($this->ObjetosObjetos);
 
         $this->set(compact('objetosObjetos'));
@@ -36,7 +39,7 @@ class ObjetosObjetosController extends AppController
     public function view($id = null)
     {
         $objetosObjeto = $this->ObjetosObjetos->get($id, [
-            'contain' => []
+            'contain' => ['Objetos']
         ]);
 
         $this->set('objetosObjeto', $objetosObjeto);
@@ -60,7 +63,8 @@ class ObjetosObjetosController extends AppController
             }
             $this->Flash->error(__('The objetos objeto could not be saved. Please, try again.'));
         }
-        $this->set(compact('objetosObjeto'));
+        $objetos = $this->ObjetosObjetos->Objetos->find('list', ['limit' => 200]);
+        $this->set(compact('objetosObjeto', 'objetos'));
         $this->set('_serialize', ['objetosObjeto']);
     }
 
@@ -85,7 +89,8 @@ class ObjetosObjetosController extends AppController
             }
             $this->Flash->error(__('The objetos objeto could not be saved. Please, try again.'));
         }
-        $this->set(compact('objetosObjeto'));
+        $objetos = $this->ObjetosObjetos->Objetos->find('list', ['limit' => 200]);
+        $this->set(compact('objetosObjeto', 'objetos'));
         $this->set('_serialize', ['objetosObjeto']);
     }
 

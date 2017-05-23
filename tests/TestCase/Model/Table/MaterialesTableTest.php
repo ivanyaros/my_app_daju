@@ -31,7 +31,6 @@ class MaterialesTableTest extends TestCase
         'app.monedas',
         'app.producto',
         'app.ivas',
-        'app.cajas',
         'app.objetos',
         'app.ordens',
         'app.estados',
@@ -41,13 +40,11 @@ class MaterialesTableTest extends TestCase
         'app.proveedores_clientes',
         'app.direcciones',
         'app.pedidos_empresas',
-        'app.salidas_productos',
-        'app.salidas_productos_producto',
-        'app.productos',
+        'app.salidas_objetos',
         'app.pedidos_empresas_producto',
         'app.proveedores_clientes_material',
         'app.localizaciones',
-        'app.palets',
+        'app.objetos_materiales',
         'app.proceso_producto',
         'app.proceso_material'
     ];

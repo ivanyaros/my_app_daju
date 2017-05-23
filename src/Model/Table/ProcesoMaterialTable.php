@@ -38,12 +38,10 @@ class ProcesoMaterialTable extends Table
         $this->setPrimaryKey(['proceso_id', 'material_id']);
 
         $this->belongsTo('Proceso', [
-            'foreignKey' => 'proceso_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'proceso_id'
         ]);
         $this->belongsTo('Material', [
-            'foreignKey' => 'material_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'material_id'
         ]);
     }
 
@@ -55,6 +53,10 @@ class ProcesoMaterialTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
         $validator
             ->numeric('metros_lineales')
             ->allowEmpty('metros_lineales');

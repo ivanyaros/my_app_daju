@@ -14,6 +14,8 @@
         <li><?= $this->Html->link(__('New Objeto'), ['controller' => 'Objetos', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Materiales'), ['controller' => 'Materiales', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Materiale'), ['controller' => 'Materiales', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Material'), ['controller' => 'Material', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Material'), ['controller' => 'Material', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="objetosMateriales view large-9 medium-8 columns content">
@@ -24,12 +26,12 @@
             <td><?= $objetosMateriale->has('objeto') ? $this->Html->link($objetosMateriale->objeto->id, ['controller' => 'Objetos', 'action' => 'view', $objetosMateriale->objeto->id]) : '' ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Materiale') ?></th>
-            <td><?= $objetosMateriale->has('materiale') ? $this->Html->link($objetosMateriale->materiale->id, ['controller' => 'Materiales', 'action' => 'view', $objetosMateriale->materiale->id]) : '' ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Observaciones') ?></th>
             <td><?= h($objetosMateriale->observaciones) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($objetosMateriale->id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Materiale Id') ?></th>

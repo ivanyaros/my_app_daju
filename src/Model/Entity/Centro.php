@@ -16,7 +16,7 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\Localizacione[] $localizaciones
  * @property \App\Model\Entity\Orden[] $ordens
  * @property \App\Model\Entity\Proceso[] $proceso
- * @property \App\Model\Entity\SalidasProducto[] $salidas_productos
+ * @property \App\Model\Entity\SalidasObjeto[] $salidas_objetos
  */
 class Centro extends Entity
 {

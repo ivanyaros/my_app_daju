@@ -18,6 +18,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('proveedores_cliente_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('material_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('observaciones') ?></th>
@@ -27,6 +28,7 @@
         <tbody>
             <?php foreach ($proveedoresClientesMaterial as $proveedoresClientesMaterial): ?>
             <tr>
+                <td><?= $this->Number->format($proveedoresClientesMaterial->id) ?></td>
                 <td><?= $proveedoresClientesMaterial->has('proveedores_cliente') ? $this->Html->link($proveedoresClientesMaterial->proveedores_cliente->id, ['controller' => 'ProveedoresClientes', 'action' => 'view', $proveedoresClientesMaterial->proveedores_cliente->id]) : '' ?></td>
                 <td><?= $proveedoresClientesMaterial->has('material') ? $this->Html->link($proveedoresClientesMaterial->material->id, ['controller' => 'Material', 'action' => 'view', $proveedoresClientesMaterial->material->id]) : '' ?></td>
                 <td><?= h($proveedoresClientesMaterial->observaciones) ?></td>

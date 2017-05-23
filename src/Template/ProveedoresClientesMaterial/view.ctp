@@ -31,5 +31,9 @@
             <th scope="row"><?= __('Observaciones') ?></th>
             <td><?= h($proveedoresClientesMaterial->observaciones) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($proveedoresClientesMaterial->id) ?></td>
+        </tr>
     </table>
 </div>

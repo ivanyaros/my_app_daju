@@ -13,6 +13,8 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Objetos Objetos'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Objetos'), ['controller' => 'Objetos', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Objeto'), ['controller' => 'Objetos', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="objetosObjetos form large-9 medium-8 columns content">
@@ -20,6 +22,7 @@
     <fieldset>
         <legend><?= __('Edit Objetos Objeto') ?></legend>
         <?php
+            echo $this->Form->control('id');
             echo $this->Form->control('cantidad_producida');
             echo $this->Form->control('cantidad_gastada');
             echo $this->Form->control('scrap');

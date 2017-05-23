@@ -6,9 +6,9 @@ use Cake\ORM\Entity;
 /**
  * ObjetosMateriale Entity
  *
+ * @property int $id
  * @property int $objeto_id
  * @property int $materiale_id
- * @property int $materiales_material_id
  * @property int $cantidad_producida
  * @property float $uso
  * @property float $scrap
@@ -16,6 +16,7 @@ use Cake\ORM\Entity;
  *
  * @property \App\Model\Entity\Objeto $objeto
  * @property \App\Model\Entity\Materiale $materiale
+ * @property \App\Model\Entity\Material $material
  */
 class ObjetosMateriale extends Entity
 {

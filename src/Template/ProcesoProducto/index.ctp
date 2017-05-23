@@ -18,22 +18,22 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('proceso_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('producto_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('cantidad') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('entrada_salida') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('observaciones') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($procesoProducto as $procesoProducto): ?>
             <tr>
+                <td><?= $this->Number->format($procesoProducto->id) ?></td>
                 <td><?= $procesoProducto->has('proceso') ? $this->Html->link($procesoProducto->proceso->id, ['controller' => 'Proceso', 'action' => 'view', $procesoProducto->proceso->id]) : '' ?></td>
                 <td><?= $procesoProducto->has('producto') ? $this->Html->link($procesoProducto->producto->id, ['controller' => 'Producto', 'action' => 'view', $procesoProducto->producto->id]) : '' ?></td>
                 <td><?= $this->Number->format($procesoProducto->cantidad) ?></td>
                 <td><?= h($procesoProducto->entrada_salida) ?></td>
-                <td><?= h($procesoProducto->observaciones) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $procesoProducto->proceso_id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $procesoProducto->proceso_id]) ?>

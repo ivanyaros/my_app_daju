@@ -18,20 +18,24 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('pedidos_empresa_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('producto_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('cantidad') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('fecha') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('observaciones') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($pedidosEmpresasProducto as $pedidosEmpresasProducto): ?>
             <tr>
+                <td><?= $this->Number->format($pedidosEmpresasProducto->id) ?></td>
                 <td><?= $pedidosEmpresasProducto->has('pedidos_empresa') ? $this->Html->link($pedidosEmpresasProducto->pedidos_empresa->id, ['controller' => 'PedidosEmpresas', 'action' => 'view', $pedidosEmpresasProducto->pedidos_empresa->id]) : '' ?></td>
                 <td><?= $pedidosEmpresasProducto->has('producto') ? $this->Html->link($pedidosEmpresasProducto->producto->id, ['controller' => 'Producto', 'action' => 'view', $pedidosEmpresasProducto->producto->id]) : '' ?></td>
                 <td><?= $this->Number->format($pedidosEmpresasProducto->cantidad) ?></td>
                 <td><?= h($pedidosEmpresasProducto->fecha) ?></td>
+                <td><?= h($pedidosEmpresasProducto->observaciones) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $pedidosEmpresasProducto->pedidos_empresa_id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $pedidosEmpresasProducto->pedidos_empresa_id]) ?>

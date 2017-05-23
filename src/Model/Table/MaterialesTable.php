@@ -39,8 +39,7 @@ class MaterialesTable extends Table
         $this->setPrimaryKey(['id', 'material_id']);
 
         $this->belongsTo('Material', [
-            'foreignKey' => 'material_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'material_id'
         ]);
         $this->belongsTo('Localizaciones', [
             'foreignKey' => 'localizacione_id'

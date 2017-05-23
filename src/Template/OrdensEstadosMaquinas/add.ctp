@@ -18,6 +18,9 @@
     <fieldset>
         <legend><?= __('Add Ordens Estados Maquina') ?></legend>
         <?php
+            echo $this->Form->control('id');
+            echo $this->Form->control('ordens_estado_id');
+            echo $this->Form->control('maquina_id');
             echo $this->Form->control('operaciones');
             echo $this->Form->control('uso');
             echo $this->Form->control('observaciones');

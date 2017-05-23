@@ -32,6 +32,10 @@
             <td><?= h($procesoMaterial->observaciones) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($procesoMaterial->id) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Metros Lineales') ?></th>
             <td><?= $this->Number->format($procesoMaterial->metros_lineales) ?></td>
         </tr>

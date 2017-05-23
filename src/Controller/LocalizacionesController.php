@@ -39,7 +39,7 @@ class LocalizacionesController extends AppController
     public function view($id = null)
     {
         $localizacione = $this->Localizaciones->get($id, [
-            'contain' => ['Centros']
+            'contain' => ['Centros', 'Materiales', 'Objetos']
         ]);
 
         $this->set('localizacione', $localizacione);

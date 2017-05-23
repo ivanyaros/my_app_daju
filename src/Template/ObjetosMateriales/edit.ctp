@@ -17,6 +17,8 @@
         <li><?= $this->Html->link(__('New Objeto'), ['controller' => 'Objetos', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Materiales'), ['controller' => 'Materiales', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Materiale'), ['controller' => 'Materiales', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Material'), ['controller' => 'Material', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Material'), ['controller' => 'Material', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="objetosMateriales form large-9 medium-8 columns content">
@@ -24,6 +26,7 @@
     <fieldset>
         <legend><?= __('Edit Objetos Materiale') ?></legend>
         <?php
+            echo $this->Form->control('id');
             echo $this->Form->control('cantidad_producida');
             echo $this->Form->control('uso');
             echo $this->Form->control('scrap');

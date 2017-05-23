@@ -34,8 +34,8 @@
             <td><?= $ordensEstado->has('estado') ? $this->Html->link($ordensEstado->estado->id, ['controller' => 'Estados', 'action' => 'view', $ordensEstado->estado->id]) : '' ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Observaciones') ?></th>
-            <td><?= h($ordensEstado->observaciones) ?></td>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($ordensEstado->id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Fecha Inicio') ?></th>

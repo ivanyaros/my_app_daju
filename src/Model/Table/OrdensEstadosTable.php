@@ -38,12 +38,10 @@ class OrdensEstadosTable extends Table
         $this->setPrimaryKey(['orden_id', 'estado_id']);
 
         $this->belongsTo('Ordens', [
-            'foreignKey' => 'orden_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'orden_id'
         ]);
         $this->belongsTo('Estados', [
-            'foreignKey' => 'estado_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'estado_id'
         ]);
     }
 
@@ -56,15 +54,16 @@ class OrdensEstadosTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
             ->dateTime('fecha_inicio')
             ->allowEmpty('fecha_inicio');
 
         $validator
             ->dateTime('fecha_fin')
             ->allowEmpty('fecha_fin');
-
-        $validator
-            ->allowEmpty('observaciones');
 
         return $validator;
     }

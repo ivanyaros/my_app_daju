@@ -35,21 +35,18 @@ class ProductoTableTest extends TestCase
         'app.proveedores_clientes',
         'app.direcciones',
         'app.pedidos_empresas',
-        'app.salidas_productos',
-        'app.salidas_productos_producto',
-        'app.productos',
+        'app.salidas_objetos',
         'app.pedidos_empresas_producto',
         'app.proveedores_clientes_material',
         'app.materiales',
         'app.localizaciones',
+        'app.objetos',
         'app.ordens',
         'app.estados',
         'app.ordens_estados',
-        'app.objetos',
+        'app.objetos_materiales',
         'app.proceso_material',
-        'app.proceso_producto',
-        'app.cajas',
-        'app.palets'
+        'app.proceso_producto'
     ];
 
     /**

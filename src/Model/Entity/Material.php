@@ -27,9 +27,11 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\Moneda $moneda
  * @property \App\Model\Entity\Iva $iva
  * @property \App\Model\Entity\Materiale[] $materiales
+ * @property \App\Model\Entity\Objeto[] $objetos
  * @property \App\Model\Entity\Proceso[] $proceso
  * @property \App\Model\Entity\ProveedoresCliente[] $proveedores_clientes
  * @property \App\Model\Entity\ProcesoMaterial[] $proceso_material
+ * @property \App\Model\Entity\ObjetosMateriale[] $objetos_materiales
  * @property \App\Model\Entity\ProveedoresClientesMaterial[] $proveedores_clientes_material
  */
 class Material extends Entity

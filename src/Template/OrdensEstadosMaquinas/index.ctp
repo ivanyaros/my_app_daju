@@ -18,9 +18,9 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('ordens_estados_orden_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('ordens_estados_estado_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('maquinas_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('ordens_estado_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('maquina_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('operaciones') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('uso') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('observaciones') ?></th>
@@ -30,9 +30,9 @@
         <tbody>
             <?php foreach ($ordensEstadosMaquinas as $ordensEstadosMaquina): ?>
             <tr>
-                <td><?= $this->Number->format($ordensEstadosMaquina->ordens_estados_orden_id) ?></td>
-                <td><?= $ordensEstadosMaquina->has('ordens_estado') ? $this->Html->link($ordensEstadosMaquina->ordens_estado->orden_id, ['controller' => 'OrdensEstados', 'action' => 'view', $ordensEstadosMaquina->ordens_estado->orden_id]) : '' ?></td>
-                <td><?= $ordensEstadosMaquina->has('maquina') ? $this->Html->link($ordensEstadosMaquina->maquina->id, ['controller' => 'Maquinas', 'action' => 'view', $ordensEstadosMaquina->maquina->id]) : '' ?></td>
+                <td><?= $this->Number->format($ordensEstadosMaquina->id) ?></td>
+                <td><?= $this->Number->format($ordensEstadosMaquina->ordens_estado_id) ?></td>
+                <td><?= $this->Number->format($ordensEstadosMaquina->maquina_id) ?></td>
                 <td><?= $this->Number->format($ordensEstadosMaquina->operaciones) ?></td>
                 <td><?= $this->Number->format($ordensEstadosMaquina->uso) ?></td>
                 <td><?= h($ordensEstadosMaquina->observaciones) ?></td>

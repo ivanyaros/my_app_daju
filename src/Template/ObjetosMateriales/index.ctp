@@ -11,6 +11,8 @@
         <li><?= $this->Html->link(__('New Objeto'), ['controller' => 'Objetos', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Materiales'), ['controller' => 'Materiales', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Materiale'), ['controller' => 'Materiales', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Material'), ['controller' => 'Material', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Material'), ['controller' => 'Material', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="objetosMateriales index large-9 medium-8 columns content">
@@ -18,9 +20,9 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('objeto_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('materiale_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('materiales_material_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('cantidad_producida') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('uso') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('scrap') ?></th>
@@ -31,9 +33,9 @@
         <tbody>
             <?php foreach ($objetosMateriales as $objetosMateriale): ?>
             <tr>
+                <td><?= $this->Number->format($objetosMateriale->id) ?></td>
                 <td><?= $objetosMateriale->has('objeto') ? $this->Html->link($objetosMateriale->objeto->id, ['controller' => 'Objetos', 'action' => 'view', $objetosMateriale->objeto->id]) : '' ?></td>
                 <td><?= $this->Number->format($objetosMateriale->materiale_id) ?></td>
-                <td><?= $objetosMateriale->has('materiale') ? $this->Html->link($objetosMateriale->materiale->id, ['controller' => 'Materiales', 'action' => 'view', $objetosMateriale->materiale->id]) : '' ?></td>
                 <td><?= $this->Number->format($objetosMateriale->cantidad_producida) ?></td>
                 <td><?= $this->Number->format($objetosMateriale->uso) ?></td>
                 <td><?= $this->Number->format($objetosMateriale->scrap) ?></td>

@@ -28,6 +28,14 @@
             <td><?= $pedidosEmpresasProducto->has('producto') ? $this->Html->link($pedidosEmpresasProducto->producto->id, ['controller' => 'Producto', 'action' => 'view', $pedidosEmpresasProducto->producto->id]) : '' ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Observaciones') ?></th>
+            <td><?= h($pedidosEmpresasProducto->observaciones) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($pedidosEmpresasProducto->id) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Cantidad') ?></th>
             <td><?= $this->Number->format($pedidosEmpresasProducto->cantidad) ?></td>
         </tr>

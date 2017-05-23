@@ -29,9 +29,7 @@ class ObjetosMaterialesControllerTest extends IntegrationTestCase
         'app.proveedores_clientes',
         'app.direcciones',
         'app.pedidos_empresas',
-        'app.salidas_productos',
-        'app.salidas_productos_producto',
-        'app.productos',
+        'app.salidas_objetos',
         'app.pedidos_empresas_producto',
         'app.proveedores_clientes_material',
         'app.materiales',
@@ -45,8 +43,7 @@ class ObjetosMaterialesControllerTest extends IntegrationTestCase
         'app.maquinas',
         'app.proceso_material',
         'app.proceso_producto',
-        'app.cajas',
-        'app.palets'
+        'app.objetos_objetos'
     ];
 
     /**

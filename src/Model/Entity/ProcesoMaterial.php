@@ -6,6 +6,7 @@ use Cake\ORM\Entity;
 /**
  * ProcesoMaterial Entity
  *
+ * @property int $id
  * @property int $proceso_id
  * @property int $material_id
  * @property float $metros_lineales

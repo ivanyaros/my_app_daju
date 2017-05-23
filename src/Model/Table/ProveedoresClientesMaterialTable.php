@@ -38,12 +38,10 @@ class ProveedoresClientesMaterialTable extends Table
         $this->setPrimaryKey(['proveedores_cliente_id', 'material_id']);
 
         $this->belongsTo('ProveedoresClientes', [
-            'foreignKey' => 'proveedores_cliente_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'proveedores_cliente_id'
         ]);
         $this->belongsTo('Material', [
-            'foreignKey' => 'material_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'material_id'
         ]);
     }
 
@@ -55,6 +53,10 @@ class ProveedoresClientesMaterialTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
         $validator
             ->allowEmpty('observaciones');
 

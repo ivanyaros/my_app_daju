@@ -6,10 +6,11 @@ use Cake\ORM\Entity;
 /**
  * OrdensEstadosUsuario Entity
  *
- * @property int $ordens_estados_orden_id
- * @property int $ordens_estados_estado_id
+ * @property int $id
+ * @property int $ordens_estado_id
  * @property int $usuario_id
  * @property float $parte
+ * @property string $observaciones
  *
  * @property \App\Model\Entity\OrdensEstado $ordens_estado
  * @property \App\Model\Entity\Usuario $usuario

@@ -6,11 +6,11 @@ use Cake\ORM\Entity;
 /**
  * ProcesoProducto Entity
  *
+ * @property int $id
  * @property int $proceso_id
  * @property int $producto_id
  * @property int $cantidad
  * @property bool $entrada_salida
- * @property string $observaciones
  *
  * @property \App\Model\Entity\Proceso $proceso
  * @property \App\Model\Entity\Producto $producto

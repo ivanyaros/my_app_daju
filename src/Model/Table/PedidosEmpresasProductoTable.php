@@ -38,12 +38,10 @@ class PedidosEmpresasProductoTable extends Table
         $this->setPrimaryKey(['pedidos_empresa_id', 'producto_id']);
 
         $this->belongsTo('PedidosEmpresas', [
-            'foreignKey' => 'pedidos_empresa_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'pedidos_empresa_id'
         ]);
         $this->belongsTo('Producto', [
-            'foreignKey' => 'producto_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'producto_id'
         ]);
     }
 
@@ -56,12 +54,19 @@ class PedidosEmpresasProductoTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
             ->integer('cantidad')
             ->allowEmpty('cantidad');
 
         $validator
             ->dateTime('fecha')
             ->allowEmpty('fecha');
+
+        $validator
+            ->allowEmpty('observaciones');
 
         return $validator;
     }

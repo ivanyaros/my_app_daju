@@ -39,7 +39,7 @@ class ProductoController extends AppController
     public function view($id = null)
     {
         $producto = $this->Producto->get($id, [
-            'contain' => ['Familias', 'Monedas', 'Ivas', 'PedidosEmpresas', 'Proceso', 'SalidasProductos', 'Cajas', 'Objetos', 'Palets']
+            'contain' => ['Familias', 'Monedas', 'Ivas', 'PedidosEmpresas', 'Proceso', 'Objetos']
         ]);
 
         $this->set('producto', $producto);
@@ -68,8 +68,7 @@ class ProductoController extends AppController
         $ivas = $this->Producto->Ivas->find('list', ['limit' => 200]);
         $pedidosEmpresas = $this->Producto->PedidosEmpresas->find('list', ['limit' => 200]);
         $proceso = $this->Producto->Proceso->find('list', ['limit' => 200]);
-        $salidasProductos = $this->Producto->SalidasProductos->find('list', ['limit' => 200]);
-        $this->set(compact('producto', 'familias', 'monedas', 'ivas', 'pedidosEmpresas', 'proceso', 'salidasProductos'));
+        $this->set(compact('producto', 'familias', 'monedas', 'ivas', 'pedidosEmpresas', 'proceso'));
         $this->set('_serialize', ['producto']);
     }
 
@@ -83,7 +82,7 @@ class ProductoController extends AppController
     public function edit($id = null)
     {
         $producto = $this->Producto->get($id, [
-            'contain' => ['PedidosEmpresas', 'Proceso', 'SalidasProductos']
+            'contain' => ['PedidosEmpresas', 'Proceso']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $producto = $this->Producto->patchEntity($producto, $this->request->getData());
@@ -99,8 +98,7 @@ class ProductoController extends AppController
         $ivas = $this->Producto->Ivas->find('list', ['limit' => 200]);
         $pedidosEmpresas = $this->Producto->PedidosEmpresas->find('list', ['limit' => 200]);
         $proceso = $this->Producto->Proceso->find('list', ['limit' => 200]);
-        $salidasProductos = $this->Producto->SalidasProductos->find('list', ['limit' => 200]);
-        $this->set(compact('producto', 'familias', 'monedas', 'ivas', 'pedidosEmpresas', 'proceso', 'salidasProductos'));
+        $this->set(compact('producto', 'familias', 'monedas', 'ivas', 'pedidosEmpresas', 'proceso'));
         $this->set('_serialize', ['producto']);
     }
 

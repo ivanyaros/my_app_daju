@@ -18,7 +18,10 @@
     <fieldset>
         <legend><?= __('Add Ordens Estados Usuario') ?></legend>
         <?php
+            echo $this->Form->control('id');
+            echo $this->Form->control('ordens_estado_id');
             echo $this->Form->control('parte');
+            echo $this->Form->control('observaciones');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

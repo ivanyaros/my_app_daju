@@ -10,7 +10,6 @@ use Cake\Validation\Validator;
  * OrdensEstadosUsuarios Model
  *
  * @property \Cake\ORM\Association\BelongsTo $OrdensEstados
- * @property \Cake\ORM\Association\BelongsTo $OrdensEstados
  * @property \Cake\ORM\Association\BelongsTo $Usuarios
  *
  * @method \App\Model\Entity\OrdensEstadosUsuario get($primaryKey, $options = [])
@@ -39,16 +38,10 @@ class OrdensEstadosUsuariosTable extends Table
         $this->setPrimaryKey(['ordens_estados_orden_id', 'ordens_estados_estado_id', 'usuario_id']);
 
         $this->belongsTo('OrdensEstados', [
-            'foreignKey' => 'ordens_estados_orden_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->belongsTo('OrdensEstados', [
-            'foreignKey' => 'ordens_estados_estado_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'ordens_estado_id'
         ]);
         $this->belongsTo('Usuarios', [
-            'foreignKey' => 'usuario_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'usuario_id'
         ]);
     }
 
@@ -61,8 +54,15 @@ class OrdensEstadosUsuariosTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
             ->numeric('parte')
             ->allowEmpty('parte');
+
+        $validator
+            ->allowEmpty('observaciones');
 
         return $validator;
     }
@@ -76,8 +76,7 @@ class OrdensEstadosUsuariosTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['ordens_estados_orden_id'], 'OrdensEstados'));
-        $rules->add($rules->existsIn(['ordens_estados_estado_id'], 'OrdensEstados'));
+        $rules->add($rules->existsIn(['ordens_estado_id'], 'OrdensEstados'));
         $rules->add($rules->existsIn(['usuario_id'], 'Usuarios'));
 
         return $rules;

@@ -7,6 +7,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Objetos Objeto'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Objetos'), ['controller' => 'Objetos', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Objeto'), ['controller' => 'Objetos', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="objetosObjetos index large-9 medium-8 columns content">
@@ -14,6 +16,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('salida') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('entrada') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('cantidad_producida') ?></th>
@@ -26,6 +29,7 @@
         <tbody>
             <?php foreach ($objetosObjetos as $objetosObjeto): ?>
             <tr>
+                <td><?= $this->Number->format($objetosObjeto->id) ?></td>
                 <td><?= $this->Number->format($objetosObjeto->salida) ?></td>
                 <td><?= $this->Number->format($objetosObjeto->entrada) ?></td>
                 <td><?= $this->Number->format($objetosObjeto->cantidad_producida) ?></td>

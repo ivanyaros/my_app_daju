@@ -18,6 +18,9 @@
     <fieldset>
         <legend><?= __('Add Ordens Estados Utensilio') ?></legend>
         <?php
+            echo $this->Form->control('id');
+            echo $this->Form->control('ordens_estado_id');
+            echo $this->Form->control('utensilio_id');
             echo $this->Form->control('observaciones');
         ?>
     </fieldset>

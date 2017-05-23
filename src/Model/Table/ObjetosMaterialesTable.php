@@ -11,7 +11,6 @@ use Cake\Validation\Validator;
  *
  * @property \Cake\ORM\Association\BelongsTo $Objetos
  * @property \Cake\ORM\Association\BelongsTo $Materiales
- * @property \Cake\ORM\Association\BelongsTo $Materiales
  *
  * @method \App\Model\Entity\ObjetosMateriale get($primaryKey, $options = [])
  * @method \App\Model\Entity\ObjetosMateriale newEntity($data = null, array $options = [])
@@ -39,16 +38,10 @@ class ObjetosMaterialesTable extends Table
         $this->setPrimaryKey(['objeto_id', 'materiale_id', 'materiales_material_id']);
 
         $this->belongsTo('Objetos', [
-            'foreignKey' => 'objeto_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'objeto_id'
         ]);
         $this->belongsTo('Materiales', [
-            'foreignKey' => 'materiale_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->belongsTo('Materiales', [
-            'foreignKey' => 'materiales_material_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'materiale_id'
         ]);
     }
 
@@ -60,6 +53,10 @@ class ObjetosMaterialesTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
         $validator
             ->integer('cantidad_producida')
             ->allowEmpty('cantidad_producida');
@@ -89,7 +86,6 @@ class ObjetosMaterialesTable extends Table
     {
         $rules->add($rules->existsIn(['objeto_id'], 'Objetos'));
         $rules->add($rules->existsIn(['materiale_id'], 'Materiales'));
-        $rules->add($rules->existsIn(['materiales_material_id'], 'Materiales'));
 
         return $rules;
     }

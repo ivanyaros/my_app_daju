@@ -19,6 +19,8 @@
         <li><?= $this->Html->link(__('New Localizacione'), ['controller' => 'Localizaciones', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Entradas Material'), ['controller' => 'EntradasMaterial', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Entradas Material'), ['controller' => 'EntradasMaterial', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Objetos'), ['controller' => 'Objetos', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Objeto'), ['controller' => 'Objetos', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="materiales form large-9 medium-8 columns content">
@@ -27,8 +29,9 @@
         <legend><?= __('Edit Materiale') ?></legend>
         <?php
             echo $this->Form->control('fecha_entega', ['empty' => true]);
-            echo $this->Form->control('localizacione_id');
+            echo $this->Form->control('localizacione_id', ['options' => $localizaciones, 'empty' => true]);
             echo $this->Form->control('entradas_material_id', ['options' => $entradasMaterial, 'empty' => true]);
+            echo $this->Form->control('objetos._ids', ['options' => $objetos]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

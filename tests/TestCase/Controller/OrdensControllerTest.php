@@ -28,7 +28,7 @@ class OrdensControllerTest extends IntegrationTestCase
         'app.proveedores_clientes',
         'app.direcciones',
         'app.pedidos_empresas',
-        'app.salidas_productos',
+        'app.salidas_objetos',
         'app.producto',
         'app.familias',
         'app.material',
@@ -39,13 +39,11 @@ class OrdensControllerTest extends IntegrationTestCase
         'app.proceso_producto',
         'app.materiales',
         'app.localizaciones',
-        'app.proveedores_clientes_material',
-        'app.cajas',
         'app.objetos',
-        'app.palets',
-        'app.pedidos_empresas_producto',
-        'app.salidas_productos_producto',
-        'app.productos'
+        'app.objetos_materiales',
+        'app.objetos_objetos',
+        'app.proveedores_clientes_material',
+        'app.pedidos_empresas_producto'
     ];
 
     /**

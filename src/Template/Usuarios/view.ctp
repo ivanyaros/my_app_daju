@@ -55,20 +55,20 @@
         <?php if (!empty($usuario->ordens_estados)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
+                <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Orden Id') ?></th>
                 <th scope="col"><?= __('Estado Id') ?></th>
                 <th scope="col"><?= __('Fecha Inicio') ?></th>
                 <th scope="col"><?= __('Fecha Fin') ?></th>
-                <th scope="col"><?= __('Observaciones') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($usuario->ordens_estados as $ordensEstados): ?>
             <tr>
+                <td><?= h($ordensEstados->id) ?></td>
                 <td><?= h($ordensEstados->orden_id) ?></td>
                 <td><?= h($ordensEstados->estado_id) ?></td>
                 <td><?= h($ordensEstados->fecha_inicio) ?></td>
                 <td><?= h($ordensEstados->fecha_fin) ?></td>
-                <td><?= h($ordensEstados->observaciones) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'OrdensEstados', 'action' => 'view', $ordensEstados->orden_id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'OrdensEstados', 'action' => 'edit', $ordensEstados->orden_id]) ?>

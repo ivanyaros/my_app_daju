@@ -18,6 +18,7 @@
     <fieldset>
         <legend><?= __('Add Proceso Material') ?></legend>
         <?php
+            echo $this->Form->control('id');
             echo $this->Form->control('metros_lineales');
             echo $this->Form->control('metros_cuadrados');
             echo $this->Form->control('observaciones');

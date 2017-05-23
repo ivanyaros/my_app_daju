@@ -11,6 +11,8 @@ use Cake\ORM\Entity;
  * @property string $nombre
  *
  * @property \App\Model\Entity\Centro $centro
+ * @property \App\Model\Entity\Materiale[] $materiales
+ * @property \App\Model\Entity\Objeto[] $objetos
  */
 class Localizacione extends Entity
 {

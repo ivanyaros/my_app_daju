@@ -18,6 +18,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('proceso_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('material_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('metros_lineales') ?></th>
@@ -29,6 +30,7 @@
         <tbody>
             <?php foreach ($procesoMaterial as $procesoMaterial): ?>
             <tr>
+                <td><?= $this->Number->format($procesoMaterial->id) ?></td>
                 <td><?= $procesoMaterial->has('proceso') ? $this->Html->link($procesoMaterial->proceso->id, ['controller' => 'Proceso', 'action' => 'view', $procesoMaterial->proceso->id]) : '' ?></td>
                 <td><?= $procesoMaterial->has('material') ? $this->Html->link($procesoMaterial->material->id, ['controller' => 'Material', 'action' => 'view', $procesoMaterial->material->id]) : '' ?></td>
                 <td><?= $this->Number->format($procesoMaterial->metros_lineales) ?></td>

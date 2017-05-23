@@ -21,6 +21,8 @@
         <li><?= $this->Html->link(__('New Iva'), ['controller' => 'Ivas', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Materiales'), ['controller' => 'Materiales', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Materiale'), ['controller' => 'Materiales', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Objetos'), ['controller' => 'Objetos', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Objeto'), ['controller' => 'Objetos', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Proceso'), ['controller' => 'Proceso', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Proceso'), ['controller' => 'Proceso', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Proveedores Clientes'), ['controller' => 'ProveedoresClientes', 'action' => 'index']) ?></li>
@@ -44,6 +46,7 @@
             echo $this->Form->control('iva_id', ['options' => $ivas, 'empty' => true]);
             echo $this->Form->control('observaciones');
             echo $this->Form->control('visible');
+            echo $this->Form->control('objetos._ids', ['options' => $objetos]);
             echo $this->Form->control('proceso._ids', ['options' => $proceso]);
             echo $this->Form->control('proveedores_clientes._ids', ['options' => $proveedoresClientes]);
         ?>

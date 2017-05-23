@@ -10,7 +10,6 @@ use Cake\Validation\Validator;
  * OrdensEstadosMaquinas Model
  *
  * @property \Cake\ORM\Association\BelongsTo $OrdensEstados
- * @property \Cake\ORM\Association\BelongsTo $OrdensEstados
  * @property \Cake\ORM\Association\BelongsTo $Maquinas
  *
  * @method \App\Model\Entity\OrdensEstadosMaquina get($primaryKey, $options = [])
@@ -39,16 +38,10 @@ class OrdensEstadosMaquinasTable extends Table
         $this->setPrimaryKey(['ordens_estados_orden_id', 'ordens_estados_estado_id', 'maquinas_id']);
 
         $this->belongsTo('OrdensEstados', [
-            'foreignKey' => 'ordens_estados_orden_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->belongsTo('OrdensEstados', [
-            'foreignKey' => 'ordens_estados_estado_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'ordens_estado_id'
         ]);
         $this->belongsTo('Maquinas', [
-            'foreignKey' => 'maquinas_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'maquina_id'
         ]);
     }
 
@@ -60,6 +53,10 @@ class OrdensEstadosMaquinasTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
         $validator
             ->integer('operaciones')
             ->allowEmpty('operaciones');
@@ -83,9 +80,8 @@ class OrdensEstadosMaquinasTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['ordens_estados_orden_id'], 'OrdensEstados'));
-        $rules->add($rules->existsIn(['ordens_estados_estado_id'], 'OrdensEstados'));
-        $rules->add($rules->existsIn(['maquinas_id'], 'Maquinas'));
+        $rules->add($rules->existsIn(['ordens_estado_id'], 'OrdensEstados'));
+        $rules->add($rules->existsIn(['maquina_id'], 'Maquinas'));
 
         return $rules;
     }

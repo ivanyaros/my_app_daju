@@ -39,7 +39,7 @@ class PedidosEmpresasController extends AppController
     public function view($id = null)
     {
         $pedidosEmpresa = $this->PedidosEmpresas->get($id, [
-            'contain' => ['ProveedoresClientes', 'Producto', 'SalidasProductos']
+            'contain' => ['ProveedoresClientes', 'Producto', 'SalidasObjetos']
         ]);
 
         $this->set('pedidosEmpresa', $pedidosEmpresa);

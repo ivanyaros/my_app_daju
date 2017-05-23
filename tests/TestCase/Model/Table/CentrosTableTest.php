@@ -29,7 +29,7 @@ class CentrosTableTest extends TestCase
         'app.proveedores_clientes',
         'app.direcciones',
         'app.pedidos_empresas',
-        'app.salidas_productos',
+        'app.salidas_objetos',
         'app.producto',
         'app.familias',
         'app.material',
@@ -40,16 +40,13 @@ class CentrosTableTest extends TestCase
         'app.estados',
         'app.ordens_estados',
         'app.objetos',
+        'app.localizaciones',
+        'app.materiales',
+        'app.objetos_materiales',
         'app.proceso_material',
         'app.proceso_producto',
-        'app.materiales',
-        'app.localizaciones',
         'app.proveedores_clientes_material',
-        'app.cajas',
-        'app.palets',
-        'app.pedidos_empresas_producto',
-        'app.salidas_productos_producto',
-        'app.productos'
+        'app.pedidos_empresas_producto'
     ];
 
     /**

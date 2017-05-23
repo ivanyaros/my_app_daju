@@ -6,6 +6,7 @@ use Cake\ORM\Entity;
 /**
  * ObjetosObjeto Entity
  *
+ * @property int $id
  * @property int $salida
  * @property int $entrada
  * @property int $cantidad_producida

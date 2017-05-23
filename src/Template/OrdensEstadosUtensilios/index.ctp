@@ -18,9 +18,9 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('ordens_estados_orden_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('ordens_estados_estado_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('utensilios_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('ordens_estado_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('utensilio_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('observaciones') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -28,9 +28,9 @@
         <tbody>
             <?php foreach ($ordensEstadosUtensilios as $ordensEstadosUtensilio): ?>
             <tr>
-                <td><?= $this->Number->format($ordensEstadosUtensilio->ordens_estados_orden_id) ?></td>
-                <td><?= $ordensEstadosUtensilio->has('ordens_estado') ? $this->Html->link($ordensEstadosUtensilio->ordens_estado->orden_id, ['controller' => 'OrdensEstados', 'action' => 'view', $ordensEstadosUtensilio->ordens_estado->orden_id]) : '' ?></td>
-                <td><?= $ordensEstadosUtensilio->has('utensilio') ? $this->Html->link($ordensEstadosUtensilio->utensilio->id, ['controller' => 'Utensilios', 'action' => 'view', $ordensEstadosUtensilio->utensilio->id]) : '' ?></td>
+                <td><?= $this->Number->format($ordensEstadosUtensilio->id) ?></td>
+                <td><?= $this->Number->format($ordensEstadosUtensilio->ordens_estado_id) ?></td>
+                <td><?= $this->Number->format($ordensEstadosUtensilio->utensilio_id) ?></td>
                 <td><?= h($ordensEstadosUtensilio->observaciones) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $ordensEstadosUtensilio->ordens_estados_orden_id]) ?>

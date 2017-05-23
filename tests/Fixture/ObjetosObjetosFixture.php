@@ -17,8 +17,9 @@ class ObjetosObjetosFixture extends TestFixture
      */
     // @codingStandardsIgnoreStart
     public $fields = [
-        'salida' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'entrada' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'id' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'salida' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'entrada' => ['type' => 'integer', 'length' => 10, 'unsigned' => true, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'cantidad_producida' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'cantidad_gastada' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'scrap' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
@@ -28,7 +29,7 @@ class ObjetosObjetosFixture extends TestFixture
             'fk_objetos_has_objetos_objetos1_idx' => ['type' => 'index', 'columns' => ['salida'], 'length' => []],
         ],
         '_constraints' => [
-            'primary' => ['type' => 'primary', 'columns' => ['salida', 'entrada'], 'length' => []],
+            'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
             'fk_objetos_has_objetos_objetos1' => ['type' => 'foreign', 'columns' => ['salida'], 'references' => ['objetos', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
             'fk_objetos_has_objetos_objetos2' => ['type' => 'foreign', 'columns' => ['entrada'], 'references' => ['objetos', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
@@ -46,6 +47,7 @@ class ObjetosObjetosFixture extends TestFixture
      */
     public $records = [
         [
+            'id' => 1,
             'salida' => 1,
             'entrada' => 1,
             'cantidad_producida' => 1,

@@ -10,6 +10,8 @@
         <li><?= $this->Form->postLink(__('Delete Objetos Objeto'), ['action' => 'delete', $objetosObjeto->salida], ['confirm' => __('Are you sure you want to delete # {0}?', $objetosObjeto->salida)]) ?> </li>
         <li><?= $this->Html->link(__('List Objetos Objetos'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Objetos Objeto'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Objetos'), ['controller' => 'Objetos', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Objeto'), ['controller' => 'Objetos', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="objetosObjetos view large-9 medium-8 columns content">
@@ -18,6 +20,10 @@
         <tr>
             <th scope="row"><?= __('Observaciones') ?></th>
             <td><?= h($objetosObjeto->observaciones) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($objetosObjeto->id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Salida') ?></th>

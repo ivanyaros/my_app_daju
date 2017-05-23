@@ -44,12 +44,16 @@ class ObjetosObjetosTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
             ->integer('salida')
-            ->allowEmpty('salida', 'create');
+            ->allowEmpty('salida');
 
         $validator
             ->integer('entrada')
-            ->allowEmpty('entrada', 'create');
+            ->allowEmpty('entrada');
 
         $validator
             ->integer('cantidad_producida')

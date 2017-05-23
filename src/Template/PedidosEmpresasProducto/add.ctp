@@ -18,8 +18,10 @@
     <fieldset>
         <legend><?= __('Add Pedidos Empresas Producto') ?></legend>
         <?php
+            echo $this->Form->control('id');
             echo $this->Form->control('cantidad');
             echo $this->Form->control('fecha', ['empty' => true]);
+            echo $this->Form->control('observaciones');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

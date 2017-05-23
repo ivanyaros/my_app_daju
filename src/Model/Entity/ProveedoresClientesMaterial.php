@@ -6,6 +6,7 @@ use Cake\ORM\Entity;
 /**
  * ProveedoresClientesMaterial Entity
  *
+ * @property int $id
  * @property int $proveedores_cliente_id
  * @property int $material_id
  * @property string $observaciones

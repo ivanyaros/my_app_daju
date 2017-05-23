@@ -6,10 +6,12 @@ use Cake\ORM\Entity;
 /**
  * PedidosEmpresasProducto Entity
  *
+ * @property int $id
  * @property int $pedidos_empresa_id
  * @property int $producto_id
  * @property int $cantidad
  * @property \Cake\I18n\FrozenTime $fecha
+ * @property string $observaciones
  *
  * @property \App\Model\Entity\PedidosEmpresa $pedidos_empresa
  * @property \App\Model\Entity\Producto $producto

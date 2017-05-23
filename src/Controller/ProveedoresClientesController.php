@@ -36,7 +36,7 @@ class ProveedoresClientesController extends AppController
     public function view($id = null)
     {
         $proveedoresCliente = $this->ProveedoresClientes->get($id, [
-            'contain' => ['Material', 'Direcciones', 'EntradasMaterial', 'PedidosEmpresas', 'SalidasProductos']
+            'contain' => ['Material', 'Direcciones', 'EntradasMaterial', 'PedidosEmpresas', 'SalidasObjetos']
         ]);
 
         $this->set('proveedoresCliente', $proveedoresCliente);

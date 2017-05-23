@@ -18,20 +18,22 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('ordens_estados_orden_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('ordens_estados_estado_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('ordens_estado_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('usuario_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('parte') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('observaciones') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($ordensEstadosUsuarios as $ordensEstadosUsuario): ?>
             <tr>
-                <td><?= $this->Number->format($ordensEstadosUsuario->ordens_estados_orden_id) ?></td>
-                <td><?= $ordensEstadosUsuario->has('ordens_estado') ? $this->Html->link($ordensEstadosUsuario->ordens_estado->orden_id, ['controller' => 'OrdensEstados', 'action' => 'view', $ordensEstadosUsuario->ordens_estado->orden_id]) : '' ?></td>
+                <td><?= $this->Number->format($ordensEstadosUsuario->id) ?></td>
+                <td><?= $this->Number->format($ordensEstadosUsuario->ordens_estado_id) ?></td>
                 <td><?= $ordensEstadosUsuario->has('usuario') ? $this->Html->link($ordensEstadosUsuario->usuario->usuario_id, ['controller' => 'Usuarios', 'action' => 'view', $ordensEstadosUsuario->usuario->usuario_id]) : '' ?></td>
                 <td><?= $this->Number->format($ordensEstadosUsuario->parte) ?></td>
+                <td><?= h($ordensEstadosUsuario->observaciones) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $ordensEstadosUsuario->ordens_estados_orden_id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $ordensEstadosUsuario->ordens_estados_orden_id]) ?>

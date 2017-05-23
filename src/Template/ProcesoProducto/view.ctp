@@ -28,8 +28,8 @@
             <td><?= $procesoProducto->has('producto') ? $this->Html->link($procesoProducto->producto->id, ['controller' => 'Producto', 'action' => 'view', $procesoProducto->producto->id]) : '' ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Observaciones') ?></th>
-            <td><?= h($procesoProducto->observaciones) ?></td>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($procesoProducto->id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Cantidad') ?></th>

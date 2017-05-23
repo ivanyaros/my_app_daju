@@ -22,7 +22,7 @@ class LocalizacionesControllerTest extends IntegrationTestCase
         'app.proveedores_clientes',
         'app.direcciones',
         'app.pedidos_empresas',
-        'app.salidas_productos',
+        'app.salidas_objetos',
         'app.producto',
         'app.familias',
         'app.material',
@@ -35,15 +35,12 @@ class LocalizacionesControllerTest extends IntegrationTestCase
         'app.ordens_estados_utensilios',
         'app.utensilios',
         'app.objetos',
+        'app.materiales',
+        'app.objetos_materiales',
         'app.proceso_material',
         'app.proceso_producto',
-        'app.materiales',
         'app.proveedores_clientes_material',
-        'app.cajas',
-        'app.palets',
-        'app.pedidos_empresas_producto',
-        'app.salidas_productos_producto',
-        'app.productos'
+        'app.pedidos_empresas_producto'
     ];
 
     /**

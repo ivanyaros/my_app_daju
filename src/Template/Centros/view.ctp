@@ -18,6 +18,8 @@
         <li><?= $this->Html->link(__('New Orden'), ['controller' => 'Ordens', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Proceso'), ['controller' => 'Proceso', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Proceso'), ['controller' => 'Proceso', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Salidas Objetos'), ['controller' => 'SalidasObjetos', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Salidas Objeto'), ['controller' => 'SalidasObjetos', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="centros view large-9 medium-8 columns content">
@@ -176,6 +178,39 @@
                     <?= $this->Html->link(__('View'), ['controller' => 'Proceso', 'action' => 'view', $proceso->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Proceso', 'action' => 'edit', $proceso->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'Proceso', 'action' => 'delete', $proceso->id], ['confirm' => __('Are you sure you want to delete # {0}?', $proceso->id)]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php endif; ?>
+    </div>
+    <div class="related">
+        <h4><?= __('Related Salidas Objetos') ?></h4>
+        <?php if (!empty($centro->salidas_objetos)): ?>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Proveedores Cliente Id') ?></th>
+                <th scope="col"><?= __('Fecha Pedido') ?></th>
+                <th scope="col"><?= __('Fecha Entrega') ?></th>
+                <th scope="col"><?= __('Albaran') ?></th>
+                <th scope="col"><?= __('Pedidos Empresa Id') ?></th>
+                <th scope="col"><?= __('Centro Id') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            </tr>
+            <?php foreach ($centro->salidas_objetos as $salidasObjetos): ?>
+            <tr>
+                <td><?= h($salidasObjetos->id) ?></td>
+                <td><?= h($salidasObjetos->proveedores_cliente_id) ?></td>
+                <td><?= h($salidasObjetos->fecha_pedido) ?></td>
+                <td><?= h($salidasObjetos->fecha_entrega) ?></td>
+                <td><?= h($salidasObjetos->albaran) ?></td>
+                <td><?= h($salidasObjetos->pedidos_empresa_id) ?></td>
+                <td><?= h($salidasObjetos->centro_id) ?></td>
+                <td class="actions">
+                    <?= $this->Html->link(__('View'), ['controller' => 'SalidasObjetos', 'action' => 'view', $salidasObjetos->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'SalidasObjetos', 'action' => 'edit', $salidasObjetos->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'SalidasObjetos', 'action' => 'delete', $salidasObjetos->id], ['confirm' => __('Are you sure you want to delete # {0}?', $salidasObjetos->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

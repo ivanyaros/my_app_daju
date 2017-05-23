@@ -24,9 +24,9 @@
     <fieldset>
         <legend><?= __('Edit Proceso Producto') ?></legend>
         <?php
+            echo $this->Form->control('id');
             echo $this->Form->control('cantidad');
             echo $this->Form->control('entrada_salida');
-            echo $this->Form->control('observaciones');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

@@ -33,7 +33,7 @@ class OrdensEstadosUsuariosTableTest extends TestCase
         'app.proveedores_clientes',
         'app.direcciones',
         'app.pedidos_empresas',
-        'app.salidas_productos',
+        'app.salidas_objetos',
         'app.producto',
         'app.familias',
         'app.material',
@@ -44,13 +44,10 @@ class OrdensEstadosUsuariosTableTest extends TestCase
         'app.proceso_producto',
         'app.materiales',
         'app.localizaciones',
-        'app.proveedores_clientes_material',
-        'app.cajas',
         'app.objetos',
-        'app.palets',
+        'app.objetos_materiales',
+        'app.proveedores_clientes_material',
         'app.pedidos_empresas_producto',
-        'app.salidas_productos_producto',
-        'app.productos',
         'app.usuarios'
     ];
 

@@ -20,20 +20,20 @@
     <h3><?= h($ordensEstadosMaquina->ordens_estados_orden_id) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Ordens Estado') ?></th>
-            <td><?= $ordensEstadosMaquina->has('ordens_estado') ? $this->Html->link($ordensEstadosMaquina->ordens_estado->orden_id, ['controller' => 'OrdensEstados', 'action' => 'view', $ordensEstadosMaquina->ordens_estado->orden_id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Maquina') ?></th>
-            <td><?= $ordensEstadosMaquina->has('maquina') ? $this->Html->link($ordensEstadosMaquina->maquina->id, ['controller' => 'Maquinas', 'action' => 'view', $ordensEstadosMaquina->maquina->id]) : '' ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Observaciones') ?></th>
             <td><?= h($ordensEstadosMaquina->observaciones) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Ordens Estados Orden Id') ?></th>
-            <td><?= $this->Number->format($ordensEstadosMaquina->ordens_estados_orden_id) ?></td>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($ordensEstadosMaquina->id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Ordens Estado Id') ?></th>
+            <td><?= $this->Number->format($ordensEstadosMaquina->ordens_estado_id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Maquina Id') ?></th>
+            <td><?= $this->Number->format($ordensEstadosMaquina->maquina_id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Operaciones') ?></th>
