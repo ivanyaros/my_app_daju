@@ -49,7 +49,7 @@ class MaterialesFixture extends TestFixture
         [
             'id' => 1,
             'material_id' => 1,
-            'fecha_entega' => '2017-05-23 08:06:15',
+            'fecha_entega' => '2017-05-23 08:14:27',
             'localizacione_id' => 1,
             'entradas_material_id' => 1
         ],

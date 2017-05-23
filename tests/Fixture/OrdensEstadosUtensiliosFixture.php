@@ -23,12 +23,12 @@ class OrdensEstadosUtensiliosFixture extends TestFixture
         'observaciones' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         '_indexes' => [
             'fk_ordens_estados_has_utensilios_utensilios1_idx' => ['type' => 'index', 'columns' => ['utensilio_id'], 'length' => []],
-            'fk_ordens_estados_has_utensilios_ordens_estados1_idx' => ['type' => 'index', 'columns' => ['ordens_estado_id'], 'length' => []],
+            'fk_ordens_estados_utensilios_ordens_estados1_idx' => ['type' => 'index', 'columns' => ['ordens_estado_id'], 'length' => []],
         ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'fk_ordens_estados_has_utensilios_ordens_estados1' => ['type' => 'foreign', 'columns' => ['ordens_estado_id'], 'references' => ['ordens_estados', 'orden_id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
             'fk_ordens_estados_has_utensilios_utensilios1' => ['type' => 'foreign', 'columns' => ['utensilio_id'], 'references' => ['utensilios', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
+            'fk_ordens_estados_utensilios_ordens_estados1' => ['type' => 'foreign', 'columns' => ['ordens_estado_id'], 'references' => ['ordens_estados', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',

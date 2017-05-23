@@ -31,8 +31,8 @@
             <?php foreach ($ordensEstadosMaquinas as $ordensEstadosMaquina): ?>
             <tr>
                 <td><?= $this->Number->format($ordensEstadosMaquina->id) ?></td>
-                <td><?= $this->Number->format($ordensEstadosMaquina->ordens_estado_id) ?></td>
-                <td><?= $this->Number->format($ordensEstadosMaquina->maquina_id) ?></td>
+                <td><?= $ordensEstadosMaquina->has('ordens_estado') ? $this->Html->link($ordensEstadosMaquina->ordens_estado->orden_id, ['controller' => 'OrdensEstados', 'action' => 'view', $ordensEstadosMaquina->ordens_estado->orden_id]) : '' ?></td>
+                <td><?= $ordensEstadosMaquina->has('maquina') ? $this->Html->link($ordensEstadosMaquina->maquina->id, ['controller' => 'Maquinas', 'action' => 'view', $ordensEstadosMaquina->maquina->id]) : '' ?></td>
                 <td><?= $this->Number->format($ordensEstadosMaquina->operaciones) ?></td>
                 <td><?= $this->Number->format($ordensEstadosMaquina->uso) ?></td>
                 <td><?= h($ordensEstadosMaquina->observaciones) ?></td>

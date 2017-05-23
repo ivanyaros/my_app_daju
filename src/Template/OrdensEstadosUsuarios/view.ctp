@@ -20,6 +20,10 @@
     <h3><?= h($ordensEstadosUsuario->ordens_estados_orden_id) ?></h3>
     <table class="vertical-table">
         <tr>
+            <th scope="row"><?= __('Ordens Estado') ?></th>
+            <td><?= $ordensEstadosUsuario->has('ordens_estado') ? $this->Html->link($ordensEstadosUsuario->ordens_estado->orden_id, ['controller' => 'OrdensEstados', 'action' => 'view', $ordensEstadosUsuario->ordens_estado->orden_id]) : '' ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Usuario') ?></th>
             <td><?= $ordensEstadosUsuario->has('usuario') ? $this->Html->link($ordensEstadosUsuario->usuario->usuario_id, ['controller' => 'Usuarios', 'action' => 'view', $ordensEstadosUsuario->usuario->usuario_id]) : '' ?></td>
         </tr>
@@ -30,10 +34,6 @@
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($ordensEstadosUsuario->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Ordens Estado Id') ?></th>
-            <td><?= $this->Number->format($ordensEstadosUsuario->ordens_estado_id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Parte') ?></th>

@@ -25,7 +25,7 @@
         <legend><?= __('Edit Ordens Estados Usuario') ?></legend>
         <?php
             echo $this->Form->control('id');
-            echo $this->Form->control('ordens_estado_id');
+            echo $this->Form->control('ordens_estado_id', ['options' => $ordensEstados, 'empty' => true]);
             echo $this->Form->control('parte');
             echo $this->Form->control('observaciones');
         ?>

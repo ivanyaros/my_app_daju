@@ -35,7 +35,7 @@
             <tr>
                 <td><?= $this->Number->format($objetosMateriale->id) ?></td>
                 <td><?= $objetosMateriale->has('objeto') ? $this->Html->link($objetosMateriale->objeto->id, ['controller' => 'Objetos', 'action' => 'view', $objetosMateriale->objeto->id]) : '' ?></td>
-                <td><?= $this->Number->format($objetosMateriale->materiale_id) ?></td>
+                <td><?= $objetosMateriale->has('materiale') ? $this->Html->link($objetosMateriale->materiale->id, ['controller' => 'Materiales', 'action' => 'view', $objetosMateriale->materiale->id]) : '' ?></td>
                 <td><?= $this->Number->format($objetosMateriale->cantidad_producida) ?></td>
                 <td><?= $this->Number->format($objetosMateriale->uso) ?></td>
                 <td><?= $this->Number->format($objetosMateriale->scrap) ?></td>

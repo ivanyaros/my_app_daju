@@ -25,8 +25,8 @@
         <legend><?= __('Edit Ordens Estados Maquina') ?></legend>
         <?php
             echo $this->Form->control('id');
-            echo $this->Form->control('ordens_estado_id');
-            echo $this->Form->control('maquina_id');
+            echo $this->Form->control('ordens_estado_id', ['options' => $ordensEstados, 'empty' => true]);
+            echo $this->Form->control('maquina_id', ['options' => $maquinas, 'empty' => true]);
             echo $this->Form->control('operaciones');
             echo $this->Form->control('uso');
             echo $this->Form->control('observaciones');

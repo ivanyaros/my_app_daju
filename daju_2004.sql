@@ -718,15 +718,15 @@ CREATE TABLE IF NOT EXISTS `daju_2004`.`ordens_estados_usuarios` (
   `observaciones` VARCHAR(255) NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_ordens_estados_has_usuarios_usuarios1_idx` (`usuario_id` ASC),
-  INDEX `fk_ordens_estados_has_usuarios_ordens_estados1_idx` (`ordens_estado_id` ASC),
-  CONSTRAINT `fk_ordens_estados_has_usuarios_ordens_estados1`
-    FOREIGN KEY (`ordens_estado_id`)
-    REFERENCES `daju_2004`.`ordens_estados` (`orden_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+  INDEX `fk_ordens_estados_usuarios_ordens_estados1_idx` (`ordens_estado_id` ASC),
   CONSTRAINT `fk_ordens_estados_has_usuarios_usuarios1`
     FOREIGN KEY (`usuario_id`)
     REFERENCES `daju_2004`.`usuarios` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ordens_estados_usuarios_ordens_estados1`
+    FOREIGN KEY (`ordens_estado_id`)
+    REFERENCES `daju_2004`.`ordens_estados` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -746,15 +746,15 @@ CREATE TABLE IF NOT EXISTS `daju_2004`.`ordens_estados_maquinas` (
   `observaciones` VARCHAR(255) NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_ordens_estados_has_maquinas_maquinas1_idx` (`maquina_id` ASC),
-  INDEX `fk_ordens_estados_has_maquinas_ordens_estados1_idx` (`ordens_estado_id` ASC),
-  CONSTRAINT `fk_ordens_estados_has_maquinas_ordens_estados1`
-    FOREIGN KEY (`ordens_estado_id`)
-    REFERENCES `daju_2004`.`ordens_estados` (`orden_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+  INDEX `fk_ordens_estados_maquinas_ordens_estados1_idx` (`ordens_estado_id` ASC),
   CONSTRAINT `fk_ordens_estados_has_maquinas_maquinas1`
     FOREIGN KEY (`maquina_id`)
     REFERENCES `daju_2004`.`maquinas` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ordens_estados_maquinas_ordens_estados1`
+    FOREIGN KEY (`ordens_estado_id`)
+    REFERENCES `daju_2004`.`ordens_estados` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -772,15 +772,15 @@ CREATE TABLE IF NOT EXISTS `daju_2004`.`ordens_estados_utensilios` (
   `observaciones` VARCHAR(255) NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_ordens_estados_has_utensilios_utensilios1_idx` (`utensilio_id` ASC),
-  INDEX `fk_ordens_estados_has_utensilios_ordens_estados1_idx` (`ordens_estado_id` ASC),
-  CONSTRAINT `fk_ordens_estados_has_utensilios_ordens_estados1`
-    FOREIGN KEY (`ordens_estado_id`)
-    REFERENCES `daju_2004`.`ordens_estados` (`orden_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+  INDEX `fk_ordens_estados_utensilios_ordens_estados1_idx` (`ordens_estado_id` ASC),
   CONSTRAINT `fk_ordens_estados_has_utensilios_utensilios1`
     FOREIGN KEY (`utensilio_id`)
     REFERENCES `daju_2004`.`utensilios` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ordens_estados_utensilios_ordens_estados1`
+    FOREIGN KEY (`ordens_estado_id`)
+    REFERENCES `daju_2004`.`ordens_estados` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

@@ -26,16 +26,16 @@
             <td><?= $objetosMateriale->has('objeto') ? $this->Html->link($objetosMateriale->objeto->id, ['controller' => 'Objetos', 'action' => 'view', $objetosMateriale->objeto->id]) : '' ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Materiale') ?></th>
+            <td><?= $objetosMateriale->has('materiale') ? $this->Html->link($objetosMateriale->materiale->id, ['controller' => 'Materiales', 'action' => 'view', $objetosMateriale->materiale->id]) : '' ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Observaciones') ?></th>
             <td><?= h($objetosMateriale->observaciones) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($objetosMateriale->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Materiale Id') ?></th>
-            <td><?= $this->Number->format($objetosMateriale->materiale_id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Cantidad Producida') ?></th>
